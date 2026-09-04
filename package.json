@@ -1,0 +1,11 @@
+{
+  "name": "ai-viral-radar",
+  "version": "3.3.0",
+  "private": true,
+  "description": "AI Viral Radar V3.3 - Video Reality Benchmark & Creative Intelligence",
+  "scripts": {
+    "build": "npm --prefix apps/web run build",
+    "dev": "npm --prefix apps/web run dev",
+    "preview": "npm --prefix apps/web run preview"
+  }
+}

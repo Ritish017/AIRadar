@@ -3,7 +3,7 @@ import {
   TopOpportunitiesResponse, TrendDetail, VideoPackage
 } from "../types";
 
-const API_BASE = "http://127.0.0.1:8000/api";
+const API_BASE = (import.meta.env.VITE_API_BASE as string) || "/api";
 
 export async function fetchHealth(): Promise<{ status: string; providers_active: number }> {
   const res = await fetch(`${API_BASE}/health`);
