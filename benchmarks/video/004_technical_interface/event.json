@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_agentic_ide_diff_2025",
+  "headline": "Sub-Second Code Generation in Next-Gen IDE Interfaces",
+  "summary": "Developers adopt streaming syntax trees and real-time unified diff rendering in modern AI coding agents.",
+  "source_url": "https://github.blog/engineering/agentic-diffs",
+  "source_tier": "Tier-1 Official",
+  "confidence": 0.97,
+  "key_facts": [
+    "Deterministic DOM diff visualization prevents video compression artifacts.",
+    "Monaco editor token highlighting runs at 60 FPS.",
+    "Terminal commands execute with live stdout colorization."
+  ]
+}

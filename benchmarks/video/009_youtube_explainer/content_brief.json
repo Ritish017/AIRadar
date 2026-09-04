@@ -1,0 +1,9 @@
+{
+  "objective": "Provide an authoritative 3-minute comprehensive deep dive into transformer architecture evolution.",
+  "target_audience": "Engineering students, AI practitioners, software architects",
+  "platform": "youtube_explainer",
+  "aspect_ratio": "16:9",
+  "target_duration_sec": 120.0,
+  "tone": "Documentary, authoritative, cinematic, rigorous",
+  "core_angle": "How an obscure translation paper quietly took over all of computer science."
+}

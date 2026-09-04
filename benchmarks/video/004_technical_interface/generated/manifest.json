@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_004_technical_interface",
+  "video_identifier": "synthetic_render_004_technical_interface.mp4",
+  "model_used": "HYPERFRAMES (HTML/GSAP/Monaco DOM deterministic rendering)",
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "duration_sec": 24.0,
+  "fps": 60.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_apple_unified_memory_llm",
+  "headline": "Apple Silicon Unified Memory Emerges as Preferred Local LLM Rig",
+  "summary": "Hardware teardowns reveal how 800 GB/s unified memory bandwidth enables 128GB local models to run without PCIe bus bottlenecks.",
+  "source_url": "https://anandtech.com/show/apple-silicon-memory-architecture",
+  "source_tier": "Tier-1 Hardware Review",
+  "confidence": 0.98,
+  "key_facts": [
+    "Unified memory shares pool between CPU, GPU, and Neural Engine.",
+    "Zero-copy tensor buffers eliminate PCIe bottleneck transfer latency.",
+    "Supports running 70B parameter models on a desktop workstation."
+  ]
+}

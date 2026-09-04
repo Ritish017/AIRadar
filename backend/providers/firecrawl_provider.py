@@ -14,32 +14,55 @@ logger = logging.getLogger(__name__)
 
 QUERY_GROUPS = {
     "BREAKING": [
+        "AI breaking news today",
         "latest AI model release today",
         "major AI announcement today",
         "new frontier AI launch"
     ],
     "MODELS": [
+        "new AI model released",
+        "new AI model launched",
         "new open source LLM weights release",
         "AI reasoning model benchmark breakthrough",
-        "SOTA AI model outperforms"
+        "new multimodal reasoning model"
     ],
     "AGENTS": [
-        "new AI agent framework release",
+        "AI agent released",
+        "new AI agent framework",
         "autonomous coding agent benchmark",
-        "AI software engineering agent launch"
+        "AI software engineering agent launch",
+        "model context protocol MCP agent"
     ],
     "RESEARCH": [
-        "new AI multimodal research paper",
-        "breakthrough deep learning architecture arXiv",
-        "world model robotics foundation AI"
+        "AI research breakthrough arXiv",
+        "new reasoning architecture paper",
+        "world model robotics foundation AI",
+        "SWE-bench state of the art preprint"
     ],
-    "TOOLS": [
-        "new generative AI developer tool launched",
-        "LLM inference optimization framework"
+    "VIDEO_IMAGE": [
+        "AI video model released",
+        "AI image model released",
+        "new text to video generative model",
+        "cinematic AI video generation release"
+    ],
+    "CODING_TOOLS": [
+        "AI coding agent launch",
+        "new generative AI developer tool",
+        "LLM inference optimization framework vLLM"
+    ],
+    "HARDWARE_ROBOTICS": [
+        "AI hardware announcement",
+        "humanoid robotics foundation model",
+        "inference chip announcement TPU Blackwell"
+    ],
+    "BUSINESS_POLICY": [
+        "AI startup funding round",
+        "major AI acquisition",
+        "AI regulation safety governance announcement"
     ],
     "OPEN_SOURCE": [
         "trending open source AI repository GitHub",
-        "Hugging Face trending models release"
+        "Hugging Face trending models weights release"
     ]
 }
 
@@ -99,6 +122,42 @@ class FirecrawlProvider(BaseProvider):
             return domain
         except Exception:
             return "Web Source"
+
+    def get_source_classification(self, url: str) -> str:
+        """Classifies source into OFFICIAL, NEWS, RESEARCH, COMMUNITY, DISCOVERY."""
+        try:
+            domain = urlparse(url).netloc.lower()
+            if "arxiv.org" in domain or "paperswithcode.com" in domain:
+                return "RESEARCH"
+            if any(d in domain for d in ["openai.com", "deepmind.google", "anthropic.com", "ai.meta.com", "blogs.nvidia.com", "microsoft.com", "mistral.ai", "huggingface.co", "github.com"]):
+                return "OFFICIAL"
+            if any(d in domain for d in ["techcrunch.com", "theverge.com", "reuters.com", "bloomberg.com", "wired.com", "technologyreview.com", "arstechnica.com", "venturebeat.com"]):
+                return "NEWS"
+            if any(d in domain for d in ["x.com", "twitter.com", "reddit.com", "news.ycombinator.com"]):
+                return "COMMUNITY"
+            return "DISCOVERY"
+        except Exception:
+            return "DISCOVERY"
+
+    def generate_dynamic_queries(
+        self,
+        entities: Optional[List[str]] = None,
+        accelerating_topics: Optional[List[str]] = None
+    ) -> List[str]:
+        """Generates dynamic queries from emerging entities and accelerating topics."""
+        dynamic_queries = []
+        if entities:
+            for ent in entities[:4]:
+                clean = re.sub(r"[^\w\s\.-]", "", ent).strip()
+                if clean and len(clean) > 2:
+                    dynamic_queries.append(f'"{clean}" AI release OR model OR benchmark 2026')
+                    dynamic_queries.append(f'"{clean}" announcement')
+        if accelerating_topics:
+            for top in accelerating_topics[:3]:
+                clean = re.sub(r"[^\w\s\.-]", "", top).strip()
+                if clean and len(clean) > 2:
+                    dynamic_queries.append(f'"{clean}" breakthrough OR weights OR paper')
+        return dynamic_queries
 
     def get_next_query(self) -> Tuple[str, str]:
         """Rotates through dynamic query groups."""
@@ -216,6 +275,11 @@ class FirecrawlProvider(BaseProvider):
                 published_at=pub_date
             )
 
+            source_classification = self.get_source_classification(url)
+            discovered_at = now
+            age_seconds = max(0.0, (now - pub_date).total_seconds())
+            age_minutes = round(age_seconds / 60.0, 1)
+
             items.append({
                 "title": title.strip(),
                 "content": content.strip()[:2000] if content else title,
@@ -223,12 +287,16 @@ class FirecrawlProvider(BaseProvider):
                 "primary_source_url": url.strip(),
                 "source": source_name,
                 "source_type": "firecrawl",
+                "source_classification": source_classification,
                 "source_quality": quality,
                 "source_count": 1,
                 "author": res.get("metadata", {}).get("author") or source_name,
                 "author_handle": f"@{source_name.lower()}",
                 "author_url": url,
                 "published_at": pub_date,
+                "discovered_at": discovered_at,
+                "age_seconds": age_seconds,
+                "age_minutes": age_minutes,
                 "views": None,  # Do not fabricate metrics when unavailable
                 "likes": None,
                 "reposts": None,

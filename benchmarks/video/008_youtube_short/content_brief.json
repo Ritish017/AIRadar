@@ -1,0 +1,9 @@
+{
+  "objective": "Explain unified memory architecture in 40 seconds using macro chip visuals and animated memory pipes.",
+  "target_audience": "Hardware enthusiasts, Mac developers, and AI engineers",
+  "platform": "youtube_short",
+  "aspect_ratio": "9:16",
+  "target_duration_sec": 40.0,
+  "tone": "Insightful, visually stunning, hardware-focused",
+  "core_angle": "The secret weapon behind local AI isn't raw teraflops\u2014it's memory bus width."
+}

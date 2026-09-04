@@ -1,0 +1,620 @@
+[
+  {
+    "event_id": "event_deepseek_r1",
+    "name": "DeepSeek-R1 Open Reasoning Model Launch",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "DeepSeek Blog",
+    "expected_primary_url": "https://deepseek.com/blog/deepseek-r1",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+        "content": "DeepSeek releases DeepSeek-R1 and DeepSeek-R1-Zero trained with pure RL and cold-start data, achieving performance competitive with OpenAI o1 across math and coding benchmarks.",
+        "url": "https://deepseek.com/blog/deepseek-r1",
+        "source": "DeepSeek Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-20T10:00:00Z"
+      },
+      {
+        "title": "deepseek-ai/DeepSeek-R1: Official repository and model weights",
+        "content": "Inference and checkpoint repository for DeepSeek-R1 671B MoE and distilled Qwen/Llama models.",
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+        "source": "GitHub",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-20T10:30:00Z"
+      },
+      {
+        "title": "DeepSeek's new R1 reasoning model challenges OpenAI at fraction of training cost",
+        "content": "Chinese AI research lab DeepSeek releases open-weights reasoning model that matches frontier closed systems.",
+        "url": "https://techcrunch.com/2025/01/20/deepseek-r1-launch",
+        "source": "TechCrunch",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-01-20T11:15:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_openai_o3_mini",
+    "name": "OpenAI o3-mini Reasoning Model Release",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "OpenAI Blog",
+    "expected_primary_url": "https://openai.com/index/o3-mini",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Introducing o3-mini: our newest small reasoning model for STEM and coding",
+        "content": "OpenAI announces o3-mini featuring adjustable reasoning effort levels across ChatGPT and API, with specialized coding optimizations.",
+        "url": "https://openai.com/index/o3-mini",
+        "source": "OpenAI Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-31T18:00:00Z"
+      },
+      {
+        "title": "OpenAI launches o3-mini reasoning model in ChatGPT free tier",
+        "content": "The Verge reports on OpenAI rollout of o3-mini reasoning model to all users with low-latency STEM problem solving.",
+        "url": "https://theverge.com/2025/1/31/openai-o3-mini-reasoning-model",
+        "source": "The Verge",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-01-31T18:30:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_openai_operator",
+    "name": "OpenAI Operator Autonomous Web Agent Preview",
+    "expected_category": "Agents",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "OpenAI Blog",
+    "expected_primary_url": "https://openai.com/index/introducing-operator",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "OpenAI introduces Operator computer-using autonomous agent preview",
+        "content": "OpenAI launches Operator research preview capable of executing web browsing, form completion, and travel booking on behalf of users.",
+        "url": "https://openai.com/index/introducing-operator",
+        "source": "OpenAI Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-23T17:00:00Z"
+      },
+      {
+        "title": "OpenAI Operator browser agent: What developers and enterprises need to know",
+        "content": "Ars Technica analyzes Operator's vision-based GUI navigation and safety boundary sandboxing.",
+        "url": "https://arstechnica.com/ai/2025/01/openai-operator-autonomous-agent",
+        "source": "Ars Technica",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-01-23T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_claude_37_sonnet",
+    "name": "Anthropic Claude 3.7 Sonnet & SWE-bench Dispute",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "DEVELOPING",
+    "expected_primary_source": "Anthropic Blog",
+    "expected_primary_url": "https://anthropic.com/news/claude-3-7-sonnet",
+    "has_contradiction": true,
+    "sources": [
+      {
+        "title": "Anthropic introduces Claude 3.7 Sonnet with hybrid reasoning and Claude Code CLI",
+        "content": "Anthropic announces Claude 3.7 Sonnet combining instantaneous responses with extended thinking tokens.",
+        "url": "https://anthropic.com/news/claude-3-7-sonnet",
+        "source": "Anthropic Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-02-24T14:00:00Z"
+      },
+      {
+        "title": "Claude 3.7 Sonnet achieves 70.3% on SWE-bench Verified setting new coding frontier",
+        "content": "Official benchmark scores show Claude 3.7 Sonnet reaching 70.3% on real-world SWE-bench software engineering tasks.",
+        "url": "https://techcrunch.com/2025/02/24/claude-3-7-sonnet-swe-bench",
+        "source": "TechCrunch",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-02-24T14:45:00Z"
+      },
+      {
+        "title": "Independent audit disputes Claude 3.7 Sonnet SWE-bench score: reproduces only 62.1%",
+        "content": "Independent researchers dispute Anthropic claims after reproducing Claude 3.7 Sonnet on SWE-bench Verified with pass@1 yielding 62.1%.",
+        "url": "https://twitter.com/ai_evals/status/1892837191",
+        "source": "X",
+        "source_type": "social",
+        "source_quality": "Tier 3",
+        "published_at": "2025-02-24T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_gemini_2_flash",
+    "name": "Google Gemini 2.0 Flash Native Multimodal Launch",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Google DeepMind",
+    "expected_primary_url": "https://blog.google/technology/ai/gemini-2-0-flash",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Google DeepMind releases Gemini 2.0 Flash with native multimodality and real-time streaming",
+        "content": "Google releases Gemini 2.0 Flash with sub-second audio/video latency and native tool use across AI Studio.",
+        "url": "https://blog.google/technology/ai/gemini-2-0-flash",
+        "source": "Google DeepMind",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-12-11T16:00:00Z"
+      },
+      {
+        "title": "Gemini 2.0 Flash is now available in Google AI Studio and Vertex AI",
+        "content": "Developers gain access to multimodal live stream APIs and structured JSON output with high throughput.",
+        "url": "https://techcrunch.com/2024/12/11/gemini-2-flash-developer-access",
+        "source": "TechCrunch",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2024-12-11T17:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_deepseek_v3",
+    "name": "DeepSeek-V3 671B MoE Architecture Breakthrough",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "DeepSeek Paper",
+    "expected_primary_url": "https://arxiv.org/abs/2412.19437",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "DeepSeek-V3 Technical Report: Multi-head Latent Attention and DualPipe Parallelism",
+        "content": "DeepSeek details 671B MoE architecture with 37B activated parameters trained for $6M compute cost.",
+        "url": "https://arxiv.org/abs/2412.19437",
+        "source": "DeepSeek Paper",
+        "source_type": "academic",
+        "source_quality": "Tier 1",
+        "published_at": "2024-12-26T08:00:00Z"
+      },
+      {
+        "title": "deepseek-ai/DeepSeek-V3: Base and Instruct model release on Hugging Face",
+        "content": "Weights and FP8 checkpoints made available under MIT open license.",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+        "source": "Hugging Face",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2024-12-26T09:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_llama_33_70b",
+    "name": "Meta Llama 3.3 70B Open Source Release",
+    "expected_category": "Open Source",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Meta AI",
+    "expected_primary_url": "https://ai.meta.com/blog/llama-3-3-70b",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Meta AI launches Llama 3.3 70B with 405B capabilities at 70B cost",
+        "content": "Meta announces Llama 3.3 70B Instruct offering near parity with Llama 3.1 405B on industry benchmarks.",
+        "url": "https://ai.meta.com/blog/llama-3-3-70b",
+        "source": "Meta AI",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-12-06T17:00:00Z"
+      },
+      {
+        "title": "Llama 3.3 70B open weights download hits 500k in first 48 hours",
+        "content": "VentureBeat reports on widespread adoption of distilled open weights across Ollama and vLLM.",
+        "url": "https://venturebeat.com/ai/llama-3-3-hits-500k-downloads",
+        "source": "VentureBeat",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2024-12-08T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_vllm_v1",
+    "name": "vLLM V1 Engine Architecture Redesign",
+    "expected_category": "Infrastructure",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "vLLM Blog",
+    "expected_primary_url": "https://blog.vllm.ai/2025/01/27/v1-alpha-release.html",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "vLLM V1: A High-Throughput Architecture Overhaul for LLM Serving",
+        "content": "vLLM team announces core V1 rewrite achieving 3x throughput speedups with zero-overhead async scheduling.",
+        "url": "https://blog.vllm.ai/2025/01/27/v1-alpha-release.html",
+        "source": "vLLM Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-27T15:00:00Z"
+      },
+      {
+        "title": "vllm-project/vllm: V1 release candidate merged into main branch",
+        "content": "GitHub PR adds chunked prefill, torch.compile optimizations, and custom CUDA kernels for DeepSeek MoE.",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v1.0.0",
+        "source": "GitHub",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-27T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_cursor_agent_mode",
+    "name": "Cursor Agent Mode Autonomous Code Execution",
+    "expected_category": "Dev Tools",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Cursor Forum",
+    "expected_primary_url": "https://forum.cursor.com/t/agent-mode-launch",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Cursor introduces Agent Mode for autonomous codebase edits and terminal execution",
+        "content": "Cursor launches background agent mode capable of planning multi-file refactors and running unit tests.",
+        "url": "https://forum.cursor.com/t/agent-mode-launch",
+        "source": "Cursor Forum",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-15T19:00:00Z"
+      },
+      {
+        "title": "How Cursor's new agent mode writes, debugs, and runs code autonomously",
+        "content": "Developers demonstrate autonomous debugging workflows where the agent reads stack traces and fixes bugs.",
+        "url": "https://youtube.com/watch?v=cursor_agent_demo",
+        "source": "YouTube Tech Review",
+        "source_type": "media",
+        "source_quality": "Tier 3",
+        "published_at": "2025-01-16T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_swebench_verified",
+    "name": "SWE-bench Verified Software Engineering Benchmark",
+    "expected_category": "Research",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Princeton NLP",
+    "expected_primary_url": "https://arxiv.org/abs/2408.15242",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Princeton NLP releases SWE-bench Verified benchmark dataset",
+        "content": "Princeton and OpenAI collaborate to curate 500 human-validated real GitHub issues for trustworthy coding evaluation.",
+        "url": "https://arxiv.org/abs/2408.15242",
+        "source": "Princeton NLP",
+        "source_type": "academic",
+        "source_quality": "Tier 1",
+        "published_at": "2024-08-20T14:00:00Z"
+      },
+      {
+        "title": "swe-bench/SWE-bench-verified official repository and validation guidelines",
+        "content": "Docker harness and evaluation scripts for measuring autonomous software engineering agents.",
+        "url": "https://github.com/swe-bench/SWE-bench-verified",
+        "source": "GitHub",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2024-08-20T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_manus_agent",
+    "name": "Manus Autonomous General Agent Launch",
+    "expected_category": "Agents",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Manus Site",
+    "expected_primary_url": "https://manus.im/launch",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Manus AI unveils general agent capable of cross-application workflows",
+        "content": "Manus announces browser-native autonomous agent solving complex real-world tasks across apps without human oversight.",
+        "url": "https://manus.im/launch",
+        "source": "Manus Site",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-03-05T12:00:00Z"
+      },
+      {
+        "title": "Manus autonomous agent demo goes viral demonstrating full browser automation",
+        "content": "Social media video demonstration shows Manus researching real estate markets and writing detailed reports.",
+        "url": "https://x.com/manus_ai/status/1897261524",
+        "source": "X",
+        "source_type": "social",
+        "source_quality": "Tier 3",
+        "published_at": "2025-03-05T13:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_mistral_le_chat",
+    "name": "Mistral Le Chat Reasoning & Canvas Upgrade",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Mistral AI",
+    "expected_primary_url": "https://mistral.ai/news/le-chat-update",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Mistral upgrades Le Chat with web search, canvas, and code execution capabilities",
+        "content": "Mistral AI updates Le Chat with free document synthesis, interactive canvas, web grounding, and Pixtral vision.",
+        "url": "https://mistral.ai/news/le-chat-update",
+        "source": "Mistral AI",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-02-06T15:00:00Z"
+      },
+      {
+        "title": "Mistral Le Chat takes on ChatGPT with free reasoning, canvas, and document analysis",
+        "content": "The Verge reviews Mistral's web interface offering free frontier reasoning models to European and global users.",
+        "url": "https://theverge.com/2025/2/6/mistral-le-chat-canvas-reasoning",
+        "source": "The Verge",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-02-06T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_qwen_25_coder",
+    "name": "Alibaba Qwen 2.5-Coder 32B Open Source Release",
+    "expected_category": "AI Models",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Alibaba Cloud",
+    "expected_primary_url": "https://qwenlm.github.io/blog/qwen2.5-coder",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Alibaba releases Qwen 2.5-Coder 32B matching GPT-4o on coding benchmarks",
+        "content": "Qwen team releases 32B code model trained on 5.5 trillion tokens, setting open-source SOTA for code synthesis and debugging.",
+        "url": "https://qwenlm.github.io/blog/qwen2.5-coder",
+        "source": "Alibaba Cloud",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-11-12T08:00:00Z"
+      },
+      {
+        "title": "Qwen/Qwen2.5-Coder-32B-Instruct checkpoints released on Hugging Face",
+        "content": "Apache 2.0 licensed model weights available with 128k context window support.",
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct",
+        "source": "Hugging Face",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2024-11-12T09:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_nvidia_blackwell_gb200",
+    "name": "NVIDIA Blackwell GB200 NVL72 Server Deployments",
+    "expected_category": "Hardware",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "NVIDIA Newsroom",
+    "expected_primary_url": "https://nvidianews.nvidia.com/news/blackwell-gb200-shipments",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "NVIDIA begins volume shipments of Blackwell GB200 NVL72 systems to hyperscalers",
+        "content": "Jensen Huang announces full production of 72-GPU liquid-cooled racks delivering 30x inference speedups for trillion-parameter models.",
+        "url": "https://nvidianews.nvidia.com/news/blackwell-gb200-shipments",
+        "source": "NVIDIA Newsroom",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-22T14:00:00Z"
+      },
+      {
+        "title": "Microsoft Azure and AWS deploy first liquid-cooled NVIDIA Blackwell racks",
+        "content": "Cloud providers power up initial clusters to support reasoning model training and enterprise deployments.",
+        "url": "https://reuters.com/technology/azure-aws-deploy-blackwell-2025-01-22",
+        "source": "Reuters",
+        "source_type": "news",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-22T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_sglang_serving",
+    "name": "SGLang High-Performance Serving Engine Upgrade",
+    "expected_category": "Infrastructure",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "SGLang Team",
+    "expected_primary_url": "https://arxiv.org/abs/2312.07104",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "SGLang introduces RadixAttention and fast structured decoding for frontier models",
+        "content": "Research paper demonstrates automated KV cache reuse across multi-turn chats and reasoning rollouts.",
+        "url": "https://arxiv.org/abs/2312.07104",
+        "source": "SGLang Team",
+        "source_type": "academic",
+        "source_quality": "Tier 1",
+        "published_at": "2024-12-15T10:00:00Z"
+      },
+      {
+        "title": "sgl-project/sglang v0.4 release accelerates DeepSeek-R1 inference by 4x",
+        "content": "Open-source release integrates native FP8 GEMM kernels and multi-token speculative decoding.",
+        "url": "https://github.com/sgl-project/sglang/releases/tag/v0.4.0",
+        "source": "GitHub",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-24T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_apple_intelligence_models",
+    "name": "Apple Intelligence Foundation Models Report",
+    "expected_category": "Research",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Apple Machine Learning Research",
+    "expected_primary_url": "https://machinelearning.apple.com/research/apple-intelligence-foundation-models",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Apple Intelligence Foundation Models: Architecture, Training and Safety Report",
+        "content": "Apple publishes comprehensive architecture overview of on-device 3B parameter model and Private Cloud Compute server models.",
+        "url": "https://machinelearning.apple.com/research/apple-intelligence-foundation-models",
+        "source": "Apple Machine Learning Research",
+        "source_type": "academic",
+        "source_quality": "Tier 1",
+        "published_at": "2024-07-29T16:00:00Z"
+      },
+      {
+        "title": "Apple details Private Cloud Compute security architecture and foundation models",
+        "content": "Ars Technica reviews Apple's cryptographic verification guarantees for cloud-assisted AI inference.",
+        "url": "https://arstechnica.com/gadgets/2024/07/apple-intelligence-technical-paper",
+        "source": "Ars Technica",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2024-07-29T17:30:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_unsloth_dynamic_quant",
+    "name": "Unsloth Dynamic 4-Bit Quantization & Fast LoRA",
+    "expected_category": "Tools",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Unsloth Blog",
+    "expected_primary_url": "https://unsloth.ai/blog/dynamic-4bit-quantization",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Unsloth releases Dynamic 4-bit Quantization enabling 80% VRAM reduction without accuracy loss",
+        "content": "Unsloth announces dynamic integer quantization kernels allowing fine-tuning 70B models on consumer GPUs.",
+        "url": "https://unsloth.ai/blog/dynamic-4bit-quantization",
+        "source": "Unsloth Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-11-25T11:00:00Z"
+      },
+      {
+        "title": "unslothai/unsloth GitHub release adds support for fast DeepSeek-R1 distillation",
+        "content": "Fine-tune reasoning models 5x faster with custom Triton matrix multiplication backends.",
+        "url": "https://github.com/unslothai/unsloth/releases/tag/v2025.1",
+        "source": "GitHub",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2025-01-26T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_cohere_command_a",
+    "name": "Cohere Command A Enterprise Reasoning Launch",
+    "expected_category": "Enterprise",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Cohere Blog",
+    "expected_primary_url": "https://cohere.com/blog/command-a-launch",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Cohere introduces Command A: specialized enterprise reasoning for multi-step agents",
+        "content": "Cohere launches Command A optimized for secure tool use, database queries, and private cloud deployments.",
+        "url": "https://cohere.com/blog/command-a-launch",
+        "source": "Cohere Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2025-02-18T15:00:00Z"
+      },
+      {
+        "title": "Cohere takes on OpenAI with Command A enterprise agent model",
+        "content": "TechCrunch reports on enterprise customer trials demonstrating 40% lower cost on retrieval-augmented tasks.",
+        "url": "https://techcrunch.com/2025/02/18/cohere-command-a-launch",
+        "source": "TechCrunch",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2025-02-18T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_huggingface_smollm2",
+    "name": "Hugging Face SmolLM2 Compact SLM Series",
+    "expected_category": "Open Source",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Hugging Face Blog",
+    "expected_primary_url": "https://huggingface.co/blog/smollm2",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "SmolLM2: When Small LLMs Get Seriously Good",
+        "content": "Hugging Face releases SmolLM2 135M, 360M, and 1.7B open-weight models trained on 11 trillion curated tokens.",
+        "url": "https://huggingface.co/blog/smollm2",
+        "source": "Hugging Face Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-11-04T14:00:00Z"
+      },
+      {
+        "title": "HuggingFaceTB/SmolLM2-1.7B-Instruct: on-device evaluation results",
+        "content": "Model weights and mobile llama.cpp benchmarks released under permissive Apache 2.0 license.",
+        "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct",
+        "source": "Hugging Face",
+        "source_type": "code",
+        "source_quality": "Tier 1",
+        "published_at": "2024-11-04T15:00:00Z"
+      }
+    ]
+  },
+  {
+    "event_id": "event_microsoft_copilot_studio",
+    "name": "Microsoft Copilot Studio Autonomous Agents",
+    "expected_category": "Enterprise",
+    "expected_tier": "Tier 1",
+    "expected_status": "CONFIRMED",
+    "expected_primary_source": "Microsoft Blog",
+    "expected_primary_url": "https://blogs.microsoft.com/blog/2024/10/21/copilot-studio-autonomous-agents",
+    "has_contradiction": false,
+    "sources": [
+      {
+        "title": "Microsoft enables public preview of autonomous agents in Copilot Studio",
+        "content": "Satya Nadella announces capabilities for organizations to create autonomous agents that execute business processes.",
+        "url": "https://blogs.microsoft.com/blog/2024/10/21/copilot-studio-autonomous-agents",
+        "source": "Microsoft Blog",
+        "source_type": "official",
+        "source_quality": "Tier 1",
+        "published_at": "2024-10-21T13:00:00Z"
+      },
+      {
+        "title": "Microsoft Copilot Studio lets companies build AI agents that act autonomously",
+        "content": "The Verge details enterprise workflow agents capable of responding to supply chain disruptions and IT incidents.",
+        "url": "https://theverge.com/2024/10/21/microsoft-copilot-studio-autonomous-agents",
+        "source": "The Verge",
+        "source_type": "news",
+        "source_quality": "Tier 2",
+        "published_at": "2024-10-21T14:00:00Z"
+      }
+    ]
+  }
+]

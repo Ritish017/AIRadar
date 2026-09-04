@@ -1,0 +1,8 @@
+{
+  "rating": 5,
+  "tags": [
+    "intuitive_geometry",
+    "rigorous_math"
+  ],
+  "critique": "The transition from the QK^T matrix grid to the 3D latent vector cloud makes quadratic complexity immediately intuitive."
+}

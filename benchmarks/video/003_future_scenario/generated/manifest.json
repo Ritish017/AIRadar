@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_003_future_scenario",
+  "video_identifier": "synthetic_render_003_future_scenario.mp4",
+  "model_used": "GEMINI OMNI / VEO (Photorealistic cinematic realism & temporal camera dolly)",
+  "resolution": "1920x1080",
+  "aspect_ratio": "16:9",
+  "duration_sec": 45.0,
+  "fps": 24.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

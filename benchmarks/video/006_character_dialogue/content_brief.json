@@ -1,0 +1,9 @@
+{
+  "objective": "Dramatize the engineering trade-offs between Edge NPU and Cloud Clusters through two distinct characters.",
+  "target_audience": "Tech strategists, hardware hobbyists, and developers",
+  "platform": "youtube_short",
+  "aspect_ratio": "9:16",
+  "target_duration_sec": 35.0,
+  "tone": "Engaging, conversational, intellectually sharp",
+  "core_angle": "Will your next AI model live in your pocket or a 100-megawatt datacenter?"
+}

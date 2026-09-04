@@ -1,0 +1,9 @@
+{
+  "objective": "Demonstrate live code editing, git diffing, and automated terminal debugging.",
+  "target_audience": "Software engineers and devops specialists",
+  "platform": "youtube_short",
+  "aspect_ratio": "9:16",
+  "target_duration_sec": 24.0,
+  "tone": "Crisp, developer-native, pragmatic",
+  "core_angle": "Real code diffs don't belong in generative video: watch 60 FPS deterministic DOM rendering."
+}

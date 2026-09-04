@@ -1,0 +1,232 @@
+{
+  "storyboard_id": "sb_data_28s",
+  "title": "Data - Youtube Short",
+  "premise": "Reveals why Frontier AI Benchmark Comparison: SWE-bench & HumanEval disrupts AI compute economics and how developers deploy it.",
+  "narrative_arc": "Hook Disruption -> Verified Metric Evidence -> Architectural Secret -> Developer Proof -> Strategic Takeaway",
+  "platform": "youtube_short",
+  "visual_style": "TECH_DOCUMENTARY",
+  "total_duration_sec": 28.0,
+  "aspect_ratio": "9:16",
+  "hook_candidates": [
+    {
+      "hook_id": "HOOK-A-DATA",
+      "hook_category": "Data & Empirical Stakes",
+      "first_spoken_line": "Your entire AI compute bill just got cut by 70%.",
+      "first_visual": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+      "first_camera_movement": "Aggressive 1.2x continuous push-in on the plunge",
+      "first_on_screen_text": "-70% COMPUTE COSTS",
+      "audio_sfx": "Sub-bass impact boom (80Hz) with sharp digital riser",
+      "curiosity_mechanism": "Instant financial stake for any builder or enterprise",
+      "predicted_retention_score": 94.5,
+      "is_recommended_winner": true
+    },
+    {
+      "hook_id": "HOOK-B-CONTRARIAN",
+      "hook_category": "Contrarian Invalidating",
+      "first_spoken_line": "The biggest AI lab moat just evaporated overnight.",
+      "first_visual": "A massive titanium datacenter vault door swinging wide open to reveal a single lightweight laptop running the exact same model weights.",
+      "first_camera_movement": "Slow majestic horizontal slider tracking shot",
+      "first_on_screen_text": "THE MOAT IS GONE",
+      "audio_sfx": "Heavy mechanical latch release click followed by low vacuum hiss",
+      "curiosity_mechanism": "Invalidates prevailing industry belief that only hyperscalers can compete",
+      "predicted_retention_score": 92.0,
+      "is_recommended_winner": false
+    },
+    {
+      "hook_id": "HOOK-C-BREAKING",
+      "hook_category": "Breaking Technical Insight",
+      "first_spoken_line": "Frontier just dropped open weights that match closed frontier SOTA.",
+      "first_visual": "Split-screen: Left side shows closed commercial API price tag; right side shows terminal downloading open Apache 2.0 checkpoints.",
+      "first_camera_movement": "Snap push-in to terminal progress bar hitting 100%",
+      "first_on_screen_text": "OPEN WEIGHTS // FRONTIER PARITY",
+      "audio_sfx": "High-pitched data confirmation chirp",
+      "curiosity_mechanism": "Urgent news hook targeting immediate developer action",
+      "predicted_retention_score": 89.0,
+      "is_recommended_winner": false
+    }
+  ],
+  "selected_hook": {
+    "hook_id": "HOOK-A-DATA",
+    "hook_category": "Data & Empirical Stakes",
+    "first_spoken_line": "Your entire AI compute bill just got cut by 70%.",
+    "first_visual": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+    "first_camera_movement": "Aggressive 1.2x continuous push-in on the plunge",
+    "first_on_screen_text": "-70% COMPUTE COSTS",
+    "audio_sfx": "Sub-bass impact boom (80Hz) with sharp digital riser",
+    "curiosity_mechanism": "Instant financial stake for any builder or enterprise",
+    "predicted_retention_score": 94.5,
+    "is_recommended_winner": true
+  },
+  "shots": [
+    {
+      "shot_number": 1,
+      "timecode": "00:00 - 00:03",
+      "duration_sec": 3.0,
+      "shot_type": "Extreme Close-Up",
+      "camera_movement": "Rapid push-in",
+      "visual_objective": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+      "visual_type": "ILLUSTRATIVE_VISUAL",
+      "subject_action": "Numbers animate dynamically downward",
+      "lighting_and_atmosphere": "Diffused cyan key light",
+      "on_screen_text": "-70% COMPUTE COSTS",
+      "source_attribution_card": null,
+      "voiceover_beat": "Your entire AI compute bill just got cut by 70%.",
+      "recommended_engine": "Gemini Omni",
+      "complexity_score": 35.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 2,
+      "timecode": "00:03 - 00:07",
+      "duration_sec": 4.0,
+      "shot_type": "Medium Shot",
+      "camera_movement": "Slow pan right",
+      "visual_objective": "Clean datacenter rack with glowing status indicator for Data",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Coolant tubes illuminate with internal LED refraction",
+      "lighting_and_atmosphere": "Volumetric blue haze",
+      "on_screen_text": "DATA // VERIFIED SOTA",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "This is Frontier AI Benchmark Comparison: SWE-bench & HumanEval. Verified across standard benchmarks.",
+      "recommended_engine": "Veo",
+      "complexity_score": 45.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 3,
+      "timecode": "00:07 - 00:11",
+      "duration_sec": 4.0,
+      "shot_type": "Planar Lock-on",
+      "camera_movement": "Static lock with spring graphics",
+      "visual_objective": "Side-by-side bar chart showing 94.2% accuracy vs previous baseline",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Bars grow from 0 with bouncy physics",
+      "lighting_and_atmosphere": "Neutral graphic card studio lighting",
+      "on_screen_text": "94.2% ACCURACY // SWE-BENCH",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "On rigorous coding evaluations, it matches the top frontier systems.",
+      "recommended_engine": "Remotion",
+      "complexity_score": 25.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 4,
+      "timecode": "00:11 - 00:15",
+      "duration_sec": 4.0,
+      "shot_type": "Macro Orbit",
+      "camera_movement": "45-degree slow orbit",
+      "visual_objective": "3D sparse neural node activating only necessary pathways",
+      "visual_type": "METAPHORICAL_VISUAL",
+      "subject_action": "8 glowing threads pulse while remaining 56 threads stay dark",
+      "lighting_and_atmosphere": "Luminous self-illumination on matte black",
+      "on_screen_text": "SPARSE ACTIVATION EFFICIENCY",
+      "source_attribution_card": null,
+      "voiceover_beat": "The architectural reason: SWE-bench Verified resolution jumped from 33% to 56.8%..",
+      "recommended_engine": "Gemini Omni",
+      "complexity_score": 60.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 5,
+      "timecode": "00:15 - 00:19",
+      "duration_sec": 4.0,
+      "shot_type": "Medium Over-the-Shoulder",
+      "camera_movement": "Subtle handheld drift",
+      "visual_objective": "Developer watching terminal stream tokens at 140 tok/sec",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Text generates at blur speed without hesitation",
+      "lighting_and_atmosphere": "Warm desk lamp with cool monitor bounce",
+      "on_screen_text": "LOCAL RUNTIME: 140 TOK/S",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "For engineers: HumanEval passes 94% across top frontier reasoning models.. Deployable on local workstations.",
+      "recommended_engine": "Veo",
+      "complexity_score": 40.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 6,
+      "timecode": "00:19 - 00:23",
+      "duration_sec": 4.0,
+      "shot_type": "Terminal Planar",
+      "camera_movement": "Smooth upward pan",
+      "visual_objective": "Clean DOM terminal window executing verification script",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Output lines snap into place with zero latency",
+      "lighting_and_atmosphere": "Terminal high-contrast dark theme",
+      "on_screen_text": "STATUS: 200 OK // READY",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "No multi-million dollar cloud cluster required.",
+      "recommended_engine": "HyperFrames",
+      "complexity_score": 20.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 7,
+      "timecode": "00:23 - 00:27",
+      "duration_sec": 4.0,
+      "shot_type": "Center Medium",
+      "camera_movement": "Slow receding pull-back",
+      "visual_objective": "Summary takeaway card with source attribution",
+      "visual_type": "ILLUSTRATIVE_VISUAL",
+      "subject_action": "Card gently breathes with spring glow",
+      "lighting_and_atmosphere": "Clean dark gradient background",
+      "on_screen_text": "SOURCE: VERIFIED BENCHMARK",
+      "source_attribution_card": null,
+      "voiceover_beat": "The latency payoff is confirmed in production.",
+      "recommended_engine": "Remotion",
+      "complexity_score": 25.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 8,
+      "timecode": "00:27 - 00:30",
+      "duration_sec": 3.0,
+      "shot_type": "Close-Up Outro",
+      "camera_movement": "Snap zoom and hold",
+      "visual_objective": "Minimalist action card with bookmark icon",
+      "visual_type": "ILLUSTRATIVE_VISUAL",
+      "subject_action": "Action button pulses gently",
+      "lighting_and_atmosphere": "Dark matte slate backdrop",
+      "on_screen_text": "SAVE FOR YOUR STACK // COMMENT 'LOCAL'",
+      "source_attribution_card": null,
+      "voiceover_beat": "Are you deploying local weights this month? Comment below.",
+      "recommended_engine": "Remotion",
+      "complexity_score": 20.0,
+      "is_split_recommended": false
+    }
+  ],
+  "visual_metaphors": [
+    {
+      "technical_concept": "Sparse Mixture-of-Experts Activation",
+      "metaphor_label": "METAPHORICAL_VISUAL",
+      "visual_depiction": "Enormous clockwork gear chamber where only 8 precision cogs engage while 56 cogs glide frictionlessly in reserve.",
+      "rationale": "Prevents abstract invisible matrix multiplication from looking uninteresting on video."
+    },
+    {
+      "technical_concept": "Low-Latency Speculative Decoding",
+      "metaphor_label": "METAPHORICAL_VISUAL",
+      "visual_depiction": "Two parallel speed trains on parallel tracks: a nimble scout train laying tracks seconds ahead of the heavy cargo engine.",
+      "rationale": "Visually communicates draft models verifying tokens ahead of large model verification."
+    }
+  ],
+  "source_attribution_cards": [
+    {
+      "claim": "SWE-bench Verified resolution jumped from 33% to 56.8%.",
+      "source_card": "Source: Tier-1 Research",
+      "type": "VERIFIED_PRIMARY"
+    },
+    {
+      "claim": "HumanEval passes 94% across top frontier reasoning models.",
+      "source_card": "Source: Tier-1 Research",
+      "type": "VERIFIED_PRIMARY"
+    }
+  ],
+  "character_bible": null,
+  "retention_mechanisms": [
+    "Immediate 1.5s Numerical Disruption (Zero throat-clearing)",
+    "Open Cognitive Loop at second 4 ('The architectural secret no one is reporting')",
+    "Mid-roll Pattern Interrupt at second 15 (Wipe to live terminal proof)",
+    "Auditory Contrast (Sudden music drop during core benchmark revelation)",
+    "High-contrast visual payoffs at the conclusion"
+  ]
+}

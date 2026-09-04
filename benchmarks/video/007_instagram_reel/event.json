@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_o3_reasoning_arc",
+  "headline": "OpenAI Announces o3: Frontier Reasoning Model Outperforming PhDs",
+  "summary": "o3 achieves gold-medal competitive programming standards and breaks benchmarks in chemistry, physics, and advanced mathematics.",
+  "source_url": "https://openai.com/index/o3-announcement",
+  "source_tier": "Tier-1 Official",
+  "confidence": 0.99,
+  "key_facts": [
+    "Achieved 2727 Elo on Codeforces competitions.",
+    "Score of 96.7% on AIME 2024 math olympiad qualification.",
+    "Adaptive thinking budget lets users tune reasoning depth per token."
+  ]
+}

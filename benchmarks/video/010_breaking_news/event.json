@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_deepseek_r1_release",
+  "headline": "DeepSeek Open-Sources R1 Frontier Reasoning Model at 95% Lower Training Cost",
+  "summary": "DeepSeek releases full model weights and architecture report for R1, demonstrating competitive reasoning with top closed models using pure RL at a fraction of compute cost.",
+  "source_url": "https://github.com/deepseek-ai/DeepSeek-R1",
+  "source_tier": "Tier-1 Official Source",
+  "confidence": 0.99,
+  "key_facts": [
+    "DeepSeek-R1 trained with pure reinforcement learning without supervised warm-up.",
+    "Achieves 79.8% on MATH-500, matching frontier proprietary models.",
+    "Total cluster training compute reported under $6M."
+  ]
+}

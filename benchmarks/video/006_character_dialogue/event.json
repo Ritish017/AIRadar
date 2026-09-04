@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_edge_cloud_debate_2025",
+  "headline": "Hardware Engineers and Cloud Architects Clash Over AI Deployment",
+  "summary": "A high-stakes architectural dialogue between edge hardware specialists and hyperscale cloud providers regarding the future of AI economics.",
+  "source_url": "https://semianalysis.com/edge-cloud-ai-economics",
+  "source_tier": "Tier-1 Analysis",
+  "confidence": 0.95,
+  "key_facts": [
+    "Edge silicon allows 4-bit quantized 7B models at 4W power envelope.",
+    "Cloud inference datacenter power demands reach regional grid limits.",
+    "Hybrid split-inference offloads initial tokens to local NPU."
+  ]
+}

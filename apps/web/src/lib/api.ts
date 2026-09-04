@@ -1,6 +1,6 @@
 import {
   ContentItem, Analysis, GeneratedVariant, Topic, SavedItem, VoiceProfile,
-  TopOpportunitiesResponse, TrendDetail
+  TopOpportunitiesResponse, TrendDetail, VideoPackage
 } from "../types";
 
 const API_BASE = "http://127.0.0.1:8000/api";
@@ -170,3 +170,172 @@ export async function triggerCollection(): Promise<{ stats: any }> {
   if (!res.ok) throw new Error("Failed to trigger collection");
   return res.json();
 }
+
+export async function generateVideoPackage(payload: {
+  event_id?: string;
+  title: string;
+  topic?: string;
+  angle?: string;
+  platform: string;
+  duration_seconds: number;
+  aspect_ratio: string;
+  style_preset: string;
+  strategy: string;
+  key_claims?: string[];
+  metrics?: Record<string, any>;
+  sources?: any[];
+  has_characters?: boolean;
+  character_name?: string;
+}): Promise<VideoPackage> {
+  const res = await fetch(`${API_BASE}/video/generate-package`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to generate video package");
+  return res.json();
+}
+
+export async function fetchVideoTemplates(): Promise<{ templates: any[]; count: number }> {
+  const res = await fetch(`${API_BASE}/video/templates`);
+  if (!res.ok) throw new Error("Failed to fetch video templates");
+  return res.json();
+}
+
+export async function fetchVideoCapabilities(): Promise<{ models: any[]; count: number }> {
+  const res = await fetch(`${API_BASE}/video/capabilities`);
+  if (!res.ok) throw new Error("Failed to fetch video capabilities");
+  return res.json();
+}
+
+export async function rateVideoPrompt(payload: {
+  prompt_id: string;
+  rating: number;
+  feedback?: string;
+  failure_mode?: string;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/rate-prompt`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to rate video prompt");
+  return res.json();
+}
+
+export async function exportVideoPackage(payload: {
+  package: any;
+  format: string;
+}): Promise<{ format: string; content: string }> {
+  const res = await fetch(`${API_BASE}/video/export`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to export video package");
+  return res.json();
+}
+
+export async function fetchVisualConcepts(payload: {
+  claim: string;
+  topic?: string;
+  platform?: string;
+  metrics?: Record<string, any>;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/visual-concepts`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to fetch visual concepts");
+  return res.json();
+}
+
+export async function analyzeShotComplexity(payload: {
+  shot_id?: string;
+  visual_objective: string;
+  subject_action: string;
+  camera_movement: string;
+  duration_sec?: number;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/shots/analyze`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to analyze shot complexity");
+  return res.json();
+}
+
+export async function analyzeVideoForensics(payload: {
+  video_path_or_id: string;
+  prompt_spec?: any;
+  storyboard?: any;
+  synthetic_properties?: any;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/forensics`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to analyze video forensics");
+  return res.json();
+}
+
+export async function classifyVideoFailures(payload: {
+  failures: any[];
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/failures`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to classify video failures");
+  return res.json();
+}
+
+export async function evolveVideoPrompt(payload: {
+  current_version?: string;
+  prompt_text: string;
+  failures: any[];
+  target_model?: string;
+  human_critique?: string;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/evolve`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to evolve video prompt");
+  return res.json();
+}
+
+export async function fetchFailurePatterns(): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/failure-patterns`);
+  if (!res.ok) throw new Error("Failed to fetch failure patterns");
+  return res.json();
+}
+
+export async function fetchLearnedHeuristics(): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/learning`);
+  if (!res.ok) throw new Error("Failed to fetch learned heuristics");
+  return res.json();
+}
+
+export async function submitVideoFeedback(payload: {
+  prompt_id: string;
+  rating_stars: number;
+  failure_tags: string[];
+  critique?: string;
+  what_to_change?: string;
+}): Promise<any> {
+  const res = await fetch(`${API_BASE}/video/feedback`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error("Failed to submit video feedback");
+  return res.json();
+}
+
+

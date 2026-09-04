@@ -1,94 +1,122 @@
-# AI Viral Radar — Data Model & Schema Specification
+# AI Viral Radar V3 — Data Model & Schema Specification
 
-## 1. Normalized Content Model
-
-Every content item ingested across RSS feeds, GitHub repositories, Reddit communities, Hacker News, X syndication, or realistic mock providers is normalized into a unified structure before storage:
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `id` | UUID (string) | Universal unique identifier |
-| `source` | string (index) | Provider name (e.g. OpenAI, DeepMind, GitHub, Hacker News) |
-| `source_type` | enum/string | `rss`, `x`, `github`, `reddit`, `news`, `demo` |
-| `title` | string | Headline or first 100 characters of post |
-| `content` | text | Full post body, summary, or paper abstract |
-| `url` | string (unique, index) | Canonical URL of original source |
-| `author` | string | Display name of author or organization |
-| `author_handle` | string | Social handle (e.g. `@sama`, `deepseek-ai`) |
-| `author_url` | string | Author profile link |
-| `published_at` | datetime (index) | Timestamp when item was published |
-| `collected_at` | datetime | Timestamp when radar ingested item |
-| `views` | integer | Total view/impression count |
-| `likes` | integer | Like / upvote count |
-| `reposts` | integer | Retweet / share / fork count |
-| `replies` | integer | Comment count |
-| `quotes` | integer | Quote retweet count |
-| `media` | JSON array | List of attached image/video URLs |
-| `hashtags` | JSON array | List of discovered hashtags |
-| `language` | string | ISO language code (`en`) |
-| `engagement_rate`| float | Computed interaction percentage |
-| `engagement_velocity` | float | Hourly velocity vs expected baseline (+340%) |
-| `viral_score` | float (index) | Normalized score between 0.0 and 100.0 |
-| `trend_score` | float | Topic clustering trend weight |
-| `topic` | string (index) | Category: Models, Agents, Research, etc. |
-| `entities` | JSON array | Extracted named entities |
-| `sentiment` | string | `positive`, `neutral`, `contrarian` |
-| `content_type` | string | `news`, `benchmark`, `release`, `tool`, `paper` |
-| `hook_type` | string | `curiosity`, `milestone`, `contrarian`, `breaking_news` |
-| `source_urls` | JSON array | Preserved attribution links |
-| `attribution_required` | boolean | True for all transformed content |
+This document defines the database schema and entity relationships for **AI Viral Radar V3**, extending the V2 foundation into a multi-source canonical event and video prompt orchestration system.
 
 ---
 
-## 2. Database Schema (SQLAlchemy ORM)
+## 1. V3 Entity Relationship Diagram (ERD)
 
 ```mermaid
 erDiagram
-    CONTENT_ITEM ||--o{ CONTENT_METRICS : tracks
-    CONTENT_ITEM ||--o| ANALYSIS : has
-    CONTENT_ITEM ||--o{ GENERATED_POST : produces
-    CONTENT_ITEM ||--o{ SAVED_ITEM : bookmarked_as
-    TOPIC ||--o{ TOPIC_MENTION : contains
-    CONTENT_ITEM ||--o{ TOPIC_MENTION : associates
-    USER ||--o{ SAVED_ITEM : saves
-    USER ||--o| VOICE_PROFILE : configures
+    EVENT ||--o{ EVENT_SOURCE : aggregates
+    EVENT ||--o{ EVENT_OBSERVATION : tracks_over_time
+    EVENT ||--o{ CONTENT_BRIEF : generates
+    CONTENT_BRIEF ||--o{ CONTENT_VARIANT : produces
+    CONTENT_BRIEF ||--o{ VIDEO_PROMPT : compiles
+    CONTENT_VARIANT ||--o{ CONTENT_QUEUE_ITEM : queues
+    TOPIC ||--o{ TOPIC_OBSERVATION : records_momentum
+    USER ||--o{ USER_MONITOR : configures
+    USER ||--o{ ALERT_NOTIFICATION : receives
+    CONTENT_PERFORMANCE ||--o| VOICE_PROFILE : trains
 ```
 
-### Table: `content_items`
-Primary store for all discovered intelligence.
-- **Composite Indexes**:
-  - `idx_viral_published (viral_score, published_at)`: Enables instant feed sorting by virality.
-  - `idx_source_topic (source, topic)`: Optimizes category and publication filtering.
+---
 
-### Table: `analyses`
-One-to-one association with `content_items`. Caches AI cognitive extraction:
-- `summary`: Executive summary.
-- `main_claim`: Primary breakthrough claim.
-- `why_viral`: Array of bulleted sociological/technical drivers.
-- `hook_type`: Cognitive trigger classification.
-- `key_facts`: Array of verified technical data points.
-- `important_entities`: Organizations, models, hardware mentioned.
-- `audience`: Intended recipient demographic.
-- `recommended_angle`: Strategic creator angle.
+## 2. Core V3 Tables
 
-### Table: `generated_posts`
-One-to-many relationship with `content_items`. Stores synthesized variants:
-- `variant_type`: `news`, `hot_take`, `educational`, `thread`, `question`.
-- `tone`: `professional`, `technical`, `bold`, `casual`, `minimal`.
-- `length`: `short`, `medium`, `long`.
-- `content`: Primary post text.
-- `thread_items`: Array of numbered sub-posts for thread format.
-- `similarity_score`: Token overlap with source (0.0 to 1.0).
-- `is_safe`: Boolean (true if similarity < threshold).
-- `attribution_included`: Enforces source link presence.
+### Table: `events`
+Primary canonical event store created by clustering multi-source items.
+- `id`: UUID (Primary Key)
+- `canonical_title`: Normalized, deduplicated headline
+- `summary`: Synthesized factual overview
+- `category`: Primary AI domain (Models, Agents, Video, Research, etc.)
+- `status`: `CONFIRMED`, `LIKELY`, `DEVELOPING`, `UNVERIFIED`, `CONTRADICTED`
+- `confidence_score`: Multi-source corroboration score ($0.0 - 100.0$)
+- `source_count`: Total articles/mentions clustered
+- `independent_source_count`: Number of distinct publisher domains
+- `has_tier1_source`: Boolean indicating presence of official lab or Tier 1 outlet
+- `primary_source_url`: Canonical authoritative release link
+- `key_facts`: JSON array of verified technical assertions
+- `entities`: JSON array of extracted organizations, models, and benchmarks
+- `recommended_angle`: Selected underserved content gap angle
+- `recommended_platform`: Optimal publication channel (`X`, `LinkedIn`, `YouTube`, etc.)
+- `momentum_score`: Aggregate momentum ($0.0 - 100.0$)
+- `competition_score`: Creator saturation index ($0.0 - 100.0$)
+- `opportunity_score`: Actionable opportunity score ($0.0 - 100.0$)
+- `detection_latency`: Seconds from publication to discovery
+- `verification_latency`: Seconds to multi-source verification
+- `analysis_latency`: Seconds to complete strategic brief
+- `total_pipeline_latency`: Total seconds ("Time to Radar")
+- `event_timestamp`: Source publication time
+- `first_seen_at`: Ingestion detection time
 
-### Table: `saved_items`
-User editorial workflow:
-- `status`: `Idea`, `Draft`, `Posted`, `Ignored`.
-- `notes`: User commentary and scheduling reminders.
-- `saved_at`: Bookmark timestamp.
+### Table: `event_sources`
+Individual publisher articles mapped to a canonical event.
+- `id`: UUID
+- `event_id`: Foreign key to `events.id`
+- `url`: Article canonical URL
+- `title`: Article headline
+- `source_name`: Publisher (e.g. OpenAI, Reuters, TechCrunch)
+- `source_type`: `official`, `news`, `research`, `community`
+- `source_quality`: `Tier 1`, `Tier 2`, `Tier 3`
+- `published_at`: Item publication timestamp
+- `snippet`: Content excerpt
 
-### Table: `voice_profiles`
-Personal tone and style calibration:
-- `tone_preference`: Baseline voice.
-- `voice_examples`: Array of user-authored authentic posts.
-- `guidelines`: Custom constraints (e.g. "No emojis, prioritize architecture over hype").
+### Table: `event_observations`
+Time-series tracking of event momentum, velocity, and mentions over time.
+- `id`: UUID
+- `event_id`: Foreign key to `events.id`
+- `timestamp`: Observation recorded time
+- `mentions`: Cumulative mention count
+- `momentum`: Instantaneous momentum score
+- `velocity`: Mentions per hour
+- `confidence_score`: Corroboration score at observation time
+
+### Table: `content_briefs`
+Pre-generation editorial briefs generated before final copy synthesis.
+- `id`: UUID
+- `event_id`: Optional foreign key to `events.id`
+- `topic`: Event or trend headline
+- `audience`: Calibrated demographic (Developers, Enterprise, etc.)
+- `angle`: Differentiated perspective
+- `hook_strategy`: Psychological hook trigger
+- `key_claims`: JSON array of verified claims
+- `counterpoint`: Critical limitation or nuance
+- `visual_strategy`: Visual / video direction
+- `platform_strategy`: Primary and secondary distribution recommendation
+
+### Table: `content_variants`
+Generated platform-native content items across 𝕏, LinkedIn, Instagram, and YouTube.
+- `id`: UUID
+- `brief_id`: Foreign key to `content_briefs.id`
+- `platform`: `x`, `linkedin`, `instagram`, `youtube`
+- `format`: `single_post`, `thread`, `carousel`, `reel`, `video_script`
+- `hook`: Selected opening hook text
+- `content`: Primary copy body
+- `structured_payload`: JSON containing slides, timestamps, thumbnail prompts, etc.
+- `quality_score`: 9-dimension quality rating ($0.0 - 100.0$)
+- `is_approved`: Editorial approval flag
+
+### Table: `video_prompts`
+Compiled production-ready prompts for video generation tools.
+- `id`: UUID
+- `brief_id`: Optional foreign key to `content_briefs.id`
+- `engine`: `gemini_omni`, `remotion`, `hyperframes`, `storyboard`
+- `prompt_payload`: JSON structured according to engine specification
+- `master_prompt_text`: Raw compiled prompt for immediate copy-pasting
+
+### Table: `user_monitors`
+Custom user monitoring rules for topics, repositories, and domains.
+- `id`: UUID
+- `name`: Monitor title (e.g., "Monitor OpenAI Releases")
+- `query`: Keyword or domain filter
+- `frequency`: Polling interval in seconds
+- `importance_threshold`: Minimum opportunity score to trigger alert
+
+### Table: `content_queue_items`
+Editorial production queue state machine.
+- `id`: UUID
+- `variant_id`: Foreign key to `content_variants.id`
+- `status`: `IDEA`, `DRAFT`, `REVIEW`, `APPROVED`, `READY`, `SCHEDULED`, `PUBLISHED`, `PERFORMING`, `COMPLETED`
+- `priority`: `URGENT`, `HIGH`, `MEDIUM`, `LOW`
+- `scheduled_at`: Configured publishing time

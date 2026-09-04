@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_latent_attention_breakthrough",
+  "headline": "Novel Linear Attention Scales Diffusion to 8K Resolution",
+  "summary": "Researchers introduce linear attention kernels for high-resolution video latent diffusion models, cutting memory overhead by 4x.",
+  "source_url": "https://arxiv.org/abs/2501.99999",
+  "source_tier": "Tier-1 Research",
+  "confidence": 0.99,
+  "key_facts": [
+    "Attention matrix complexity reduced from O(N^2) to O(N).",
+    "Video frame generation scales to 8K without VRAM spikes.",
+    "Cross-frame temporal coherence improves by 35%."
+  ]
+}

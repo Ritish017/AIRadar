@@ -1,0 +1,9 @@
+{
+  "objective": "Deliver exact numerical comparison of coding benchmarks with zero visual hallucination.",
+  "target_audience": "Senior developers and quantitative engineering leaders",
+  "platform": "youtube_short",
+  "aspect_ratio": "9:16",
+  "target_duration_sec": 28.0,
+  "tone": "Analytical, precise, high-density",
+  "core_angle": "Verified benchmarks only: who actually wins at autonomous coding?"
+}

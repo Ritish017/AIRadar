@@ -1,0 +1,30 @@
+=== [VEO SHOT: VEO-SHOT-01 | 00:00 - 00:04 | 4.0s] ===
+Cinematography: Medium close-up shot, 50mm prime lens, slow continuous push-in with shallow depth of field (f/1.4). Subject: High-technology computing architecture representing Character. Action: A transparent optical accelerator node powers up, glowing channels igniting from core to edge. Context: Advanced subterranean computing cleanroom, matte titanium chassis, cool volumetric lighting. Style & Ambience: Cinematic technology documentary, photorealistic glass and copper reflections, subtle natural lens flare. Audio: Deep sub-bass impact transitioning into rising electric hum.
+
+[VEO FIRST/LAST FRAME SPECIFICATION]
+START FRAME: Photorealistic 8k still: Dormant dark server rack with single soft standby light for Character. Atmosphere: quiet, static, cold lighting.
+END FRAME: Photorealistic 8k still: The same server rack blazing with active cyan data streams and cooling circulation. Atmosphere: active, heat shimmer, dynamic lighting.
+TRANSITION PROMPT: Smooth continuous transition from dormant state to fully energized state over 4.0s. Camera executes a steady forward dolly toward the center of the core. Light channels ignite in outward sequence from center to perimeter. No sudden cuts, no random morphing artifacts, maintain exact geometric proportions of all mechanical components.
+IMMUTABLE: Core chassis dimensions, Camera trajectory vector, Mounting bracket positions
+MOVING: Optical channel luminosity, Subtle coolant fluid flow, Heat shimmer refraction
+
+
+=== [VEO SHOT: VEO-SHOT-02 | 00:04 - 00:10 | 6.0s] ===
+Cinematography: 35mm wide lens, steady orbital tracking shot drifting 45 degrees around the processor core. Subject: High-technology computing architecture representing sparse routing engine for Edge silicon allows 4-bit quantized 7B models at 4W power envelope.. Action: Complex light pathways selectively pulse; inactive routes stay dark while active routes stream at 4x speed. Context: High-vacuum chip chamber, micro-cooling channels refracting internal LEDs. Style & Ambience: Crisp scientific visualization aesthetic, ultra-clean edges, restrained industrial contrast. Audio: High-frequency rhythmic data chirp synchronized with pulse bursts.
+
+
+=== [VEO SHOT: VEO-SHOT-03 | 00:10 - 00:18 | 8.0s] ===
+Cinematography: Lock-off planar shot with slow 1.05x magnification push toward the benchmark title. Subject: High-technology computing architecture representing benchmark verification card for Edge vs Cloud AI: The Great Latency Debate. Action: Verified performance metric card illuminates, highlighting 94% accuracy over previous 49% baseline. Context: Digital verification studio environment with diffused edge rim light. Style & Ambience: Sleek motion graphic and photo hybrid, crystal clear typography. Audio: Confident mid-range chime followed by soft acoustic percussion beat.
+
+[VEO IMAGE-TO-VIDEO MOTION PROMPT]
+Animate the reference image: Maintain immutable chart geometry and typography exactly as shown. Camera performs slow 1.05x cinematic push-in. The winning performance curve illuminates with an electric cyan pulse traveling left to right over 8.0 seconds. Subtle dust particles drift in background lighting.
+IMMUTABLE ELEMENTS: Diagram layout geometry, Axis labels, Baseline data curve
+MOVING ELEMENTS: Progress indicator bar, Highlight glow along the winning curve, Subtle ambient background drift
+
+
+=== [VEO SHOT: VEO-SHOT-04 | 00:18 - 00:25 | 7.0s] ===
+Cinematography: Over-the-shoulder medium shot, 35mm lens, gentle handheld sway representing human presence. Subject: High-technology computing architecture representing developer workstation running local weights. Action: Developer types single launch command, terminal immediately responds with 140 tokens per second stream. Context: Developer studio at twilight, ambient desk light illuminating mechanical keyboard. Style & Ambience: Warm natural documentary realism, rich authentic shadow detail. Audio: Satisfying mechanical keyboard clicks layered over ambient night atmosphere.
+
+
+=== [VEO SHOT: VEO-SHOT-05 | 00:25 - 00:30 | 5.0s] ===
+Cinematography: Slow receding dolly shot drifting backward down the server aisle into soft vignette. Subject: High-technology computing architecture representing future of open-source deployment for Cloud inference datacenter power demands reach regional grid limits.. Action: Hardware unit gently transitions to sustained monitoring state, glowing cyan logo stays sharp as frame fades. Context: Server vault vanishing into single-point perspective. Style & Ambience: Premium cinematic outro aesthetic with warm baseline illumination. Audio: Warm low-frequency resolving chord, lingering ambient decay.

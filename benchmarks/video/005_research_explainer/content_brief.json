@@ -1,0 +1,9 @@
+{
+  "objective": "Explain complex mathematical attention matrices visually without losing rigorous nuance.",
+  "target_audience": "AI researchers, grad students, and ML engineers",
+  "platform": "youtube_explainer",
+  "aspect_ratio": "16:9",
+  "target_duration_sec": 60.0,
+  "tone": "Pedagogical, illuminating, visually rigorous",
+  "core_angle": "Why standard attention hits a memory wall\u2014and how linear kernels unlock 8K video."
+}

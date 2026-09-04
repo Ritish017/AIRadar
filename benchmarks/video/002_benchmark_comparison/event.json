@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_swebench_clash_2025",
+  "headline": "New Coding Frontier Benchmarks Reveal Massive Agentic Leap",
+  "summary": "Comparative evaluation on SWE-bench verified reveals Claude 3.5 Sonnet and Gemini 2.0 achieving over 55% verified software resolution.",
+  "source_url": "https://swebench.com/leaderboard",
+  "source_tier": "Tier-1 Research",
+  "confidence": 0.99,
+  "key_facts": [
+    "SWE-bench Verified resolution jumped from 33% to 56.8%.",
+    "HumanEval passes 94% across top frontier reasoning models.",
+    "Tool-call error rate dropped below 2.1%."
+  ]
+}

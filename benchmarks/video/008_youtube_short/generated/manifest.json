@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_008_youtube_short",
+  "video_identifier": "synthetic_render_008_youtube_short.mp4",
+  "model_used": "HYBRID (Omni macro semiconductor cinematography + Remotion bandwidth gauge)",
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "duration_sec": 40.0,
+  "fps": 60.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

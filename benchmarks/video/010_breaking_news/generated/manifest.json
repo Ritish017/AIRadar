@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_010_breaking_news",
+  "video_identifier": "synthetic_render_010_breaking_news.mp4",
+  "model_used": "HYBRID (Remotion verified headline quotes & cost bars + Documentary archival footage)",
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "duration_sec": 35.0,
+  "fps": 30.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

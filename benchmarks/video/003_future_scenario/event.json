@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_autonomous_logistics_future",
+  "headline": "Next-Decade Autonomous Logistics Vision Published",
+  "summary": "Urban planning simulation studies reveal decentralized AI edge routing managing millions of autonomous deliveries simultaneously.",
+  "source_url": "https://technologyreview.com/future-ai-cities",
+  "source_tier": "Tier-2 Analysis",
+  "confidence": 0.91,
+  "key_facts": [
+    "Decentralized edge nodes reduce metropolitan congestion by 40%.",
+    "Automated drone corridors coordinate with autonomous electric fleets.",
+    "Continuous optical sensing replaces traditional street lighting controls."
+  ]
+}

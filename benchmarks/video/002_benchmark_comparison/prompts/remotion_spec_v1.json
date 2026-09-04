@@ -1,0 +1,161 @@
+================================================================================
+COPY THIS INTO A REMOTION CODING AGENT
+================================================================================
+You are an expert Remotion video engineer, creative technologist, and senior motion designer.
+Your goal is to implement a pixel-perfect, deterministic, production-grade Remotion composition in React and TypeScript.
+
+DO NOT build a generic AI video.
+REJECT random floating shapes, meaningless neon gradients, excessive glassmorphism, or constant unmotivated zooming.
+Every frame, animation curve, and typography choice must serve technical clarity and high-retention storytelling.
+
+--------------------------------------------------------------------------------
+1. COMPOSITION PARAMETERS
+--------------------------------------------------------------------------------
+- Composition Name: Explainer_Data
+- Aspect Ratio: 9:16 (1080x1920)
+- Frame Rate: 30 FPS
+- Duration: 840 frames (28.0 seconds)
+- Primary Subject: Frontier AI Benchmark Comparison: SWE-bench & HumanEval
+
+--------------------------------------------------------------------------------
+2. MANDATORY REMOTION PRIMITIVES & RULES
+--------------------------------------------------------------------------------
+- Use `useCurrentFrame()` for all frame-driven coordinate and opacity transforms.
+- Use `useVideoConfig()` to access `fps`, `width`, `height`, and `durationInFrames`.
+- Use `spring()` from 'remotion' for physically-motivated entrances. Never guess damping/stiffness; use the exact parameters specified below.
+- Use `interpolate()` from 'remotion' with explicit `inputRange` and `outputRange` and `extrapolateRight: 'clamp'`.
+- Use `<Sequence>` or `<Series>` to encapsulate scene boundaries.
+- For external video or images, wrap with `<OffthreadVideo>` and `staticFile()` to ensure zero frame-dropping during headless renders.
+- Provide parameterized props conforming to the `VideoProps` TypeScript contract below.
+- Include a `calculateMetadata()` function exporting dynamic composition dimensions if props vary.
+
+--------------------------------------------------------------------------------
+3. DATA CONTRACT
+--------------------------------------------------------------------------------
+```typescript
+export interface VideoProps {
+  title: string;
+  topic: string;
+  headline: string;
+  benchmarkScore: string;
+  metricComparison: Array<{
+    label: string;
+    modelValue: number;
+    baselineValue: number;
+    unit: string;
+  }>;
+  terminalCodeSnippet: string;
+  primaryColor: string;
+  accentColor: string;
+  callToAction: string;
+  voiceoverAudioUrl?: string;
+  musicAudioUrl?: string;
+}
+```
+
+--------------------------------------------------------------------------------
+4. CREATIVE DIRECTION & VISUAL HIERARCHY
+--------------------------------------------------------------------------------
+- Emotional Goal: Empowered clarity, urgency without panic, technical mastery
+- Cognitive Takeaway: Understands exact architectural reasons why Data shifts the performance-cost curve
+- Visual Hierarchy: 1. Bold central data metric (high contrast) -> 2. Contextual label -> 3. Dynamic supporting chart -> 4. Bottom caption safe zone
+- Motion Rhythm: Anticipatory pause (6 frames) -> spring snap entrance -> gradual scale drift (0.2%/sec) -> crisp directional exit wipe
+- Color System: Minimalist matte slate (#0f172a) base, high-contrast crisp white typography, single electric accent color (#38bdf8)
+
+--------------------------------------------------------------------------------
+5. TYPOGRAPHY & PLATFORM-SAFE ZONES
+--------------------------------------------------------------------------------
+- Primary Font: Inter, -apple-system, BlinkMacSystemFont, sans-serif
+- Code Font: 'JetBrains Mono', 'Fira Code', monospace
+- Hierarchy: Headings (800 (ExtraBold)), Labels (500 (Medium)), Numbers (900 (Black))
+- Safe Area Directive: Top 120px safe (avoid reels header), Bottom 260px safe (avoid Reels UI icons/caption overlay), Left/Right 72px safe
+
+--------------------------------------------------------------------------------
+6. CAPTIONS & AUDIO TIMELINE
+--------------------------------------------------------------------------------
+- Caption Pacing: 2 to 4 words per beat
+- Highlight Color: #38bdf8
+- Position: bottom: 345.59999999999997px; left: 50%; transform: translateX(-50%);
+- Music Policy: Minimal Cinematic Electro-Acoustic / Tech Pulse (118 - 124 BPM). Duck volume to -16dB under voiceover.
+
+--------------------------------------------------------------------------------
+7. DETAILED SCENE-BY-SCENE SPECIFICATION
+--------------------------------------------------------------------------------
+### SCENE 1: HOOK & VALUE DROP (Frames 0–84 | Duration: 2.8s)
+- **Narrative Purpose:** Stop the infinite scroll with concrete numerical disruption
+- **Visual Objective:** Pop massive animated metric onto screen with physical spring recoil
+- **Voiceover Track:** "Your compute budget just got divided by four."
+- **On-Screen Typography:** "-75% COMPUTE COST // DATA"
+- **Required React Components:** TitleHookCard, SpringHeadline, AudioImpactBeep
+- **Exact Animation Specs:**
+  * Element `headline_metric`: Start frame 0, End frame 18. Initial state: {'opacity': 0.0, 'scale': 0.85, 'translateY': 40} -> Final state: {'opacity': 1.0, 'scale': 1.0, 'translateY': 0}. Timing: SPRING (damping: 12.0, stiffness: 180.0, mass: 0.8)
+  * Element `category_pill`: Start frame 6, End frame 24. Initial state: {'opacity': 0.0, 'translateX': -20} -> Final state: {'opacity': 1.0, 'translateX': 0}. Timing: INTERPOLATE Interpolation easing: ease-out
+- **Exit Transition:** hard_cut (Rationale: Hard cut maintains urgent tempo from hook directly into the core event explanation)
+- **SFX Triggers:** sub_impact_80hz at frame 0, crisp_ui_click at frame 6
+
+### SCENE 2: THE CORE BREAKTHROUGH (Frames 84–252 | Duration: 5.6s)
+- **Narrative Purpose:** Introduce the verified event and key technical metric
+- **Visual Objective:** Display animated counter ticking up from zero to verified benchmark score
+- **Voiceover Track:** "This is Frontier AI Benchmark Comparison: SWE-bench & HumanEval. Verified across standard benchmarks, matching closed frontier performance."
+- **On-Screen Typography:** "VERIFIED SOTA // Relevance"
+- **Required React Components:** AnimatedCounter, VerificationBadge, SourceCitationCard
+- **Exact Animation Specs:**
+  * Element `benchmark_counter`: Start frame 89, End frame 129. Initial state: {'numeric_value': 0, 'opacity': 0.0} -> Final state: {'numeric_value': 94.2, 'opacity': 1.0}. Timing: INTERPOLATE Interpolation easing: ease-out
+  * Element `verified_badge`: Start frame 114, End frame 134. Initial state: {'scale': 0.0, 'opacity': 0.0} -> Final state: {'scale': 1.0, 'opacity': 1.0}. Timing: SPRING (damping: 14.0, stiffness: 140.0, mass: 0.9)
+- **Exit Transition:** push_wipe_left (Rationale: Wipe signals horizontal progression into comparative evaluation)
+- **SFX Triggers:** data_counter_tick at frame 89, positive_ding at frame 114
+
+### SCENE 3: COMPARATIVE BENCHMARK GRAPH (Frames 252–462 | Duration: 7.0s)
+- **Narrative Purpose:** Provide visual proof via side-by-side metric comparison
+- **Visual Objective:** Two animated bars grow from bottom, showing new model outperforming previous industry standard
+- **Voiceover Track:** "Notice the disparity: SWE-bench Verified resolution jumped from 33% to 56.8%.. Throughput nearly doubles while total memory footprint remains constant."
+- **On-Screen Typography:** "COMPARATIVE PERFORMANCE LEAP"
+- **Required React Components:** SideBySideBarChart, PercentageDeltaPill, AxisLabels
+- **Exact Animation Specs:**
+  * Element `bar_frontier`: Start frame 262, End frame 302. Initial state: {'height_pct': 0, 'opacity': 0.0} -> Final state: {'height_pct': 94, 'opacity': 1.0}. Timing: SPRING (damping: 15.0, stiffness: 110.0, mass: 1.0)
+  * Element `delta_badge`: Start frame 297, End frame 317. Initial state: {'scale': 0.7, 'opacity': 0.0} -> Final state: {'scale': 1.0, 'opacity': 1.0}. Timing: SPRING (damping: 12.0, stiffness: 160.0, mass: 0.8)
+- **Exit Transition:** fade_to_terminal (Rationale: Smooth fade transitions from abstract graph into concrete code demonstration)
+- **SFX Triggers:** whoosh_bar_growth at frame 262, bell_accent at frame 297
+
+### SCENE 4: DEVELOPER TERMINAL & ARCHITECTURAL TRUTH (Frames 462–672 | Duration: 7.0s)
+- **Narrative Purpose:** Demonstrate concrete implementation and developer accessibility
+- **Visual Objective:** Clean syntax-highlighted terminal typing out command with live execution indicator
+- **Voiceover Track:** "Under the hood: HumanEval passes 94% across top frontier reasoning models.. Developers can deploy this directly without rewriting orchestration backends."
+- **On-Screen Typography:** "NATIVE ACCELERATION // ZERO REWRITE"
+- **Required React Components:** TerminalWindow, TypewriterCode, ExecutionSpeedIndicator
+- **Exact Animation Specs:**
+  * Element `terminal_window`: Start frame 467, End frame 487. Initial state: {'translateY': 30, 'opacity': 0.0} -> Final state: {'translateY': 0, 'opacity': 1.0}. Timing: SPRING (damping: 16.0, stiffness: 130.0, mass: 1.0)
+  * Element `typewriter_text`: Start frame 487, End frame 537. Initial state: {'character_count': 0} -> Final state: {'character_count': 64}. Timing: INTERPOLATE Interpolation easing: linear
+- **Exit Transition:** scale_down_exit (Rationale: Scale down contracts focus toward final call to action card)
+- **SFX Triggers:** mechanical_keyboard_burst at frame 487
+
+### SCENE 5: STRATEGIC CONCLUSION & CALL TO ACTION (Frames 672–840 | Duration: 5.6s)
+- **Narrative Purpose:** Leave clear tactical takeaway and prompt community engagement
+- **Visual Objective:** Pulsating bookmark/share card with clear high-contrast directive
+- **Voiceover Track:** "Are you migrating your workloads or waiting for commercial API price cuts? Comment below."
+- **On-Screen Typography:** "SAVE TO REVISIT // COMMENT 'BENCHMARK'"
+- **Required React Components:** ActionCard, ShareIconBadge, SourceAttributionFooter
+- **Exact Animation Specs:**
+  * Element `cta_card`: Start frame 677, End frame 697. Initial state: {'scale': 0.9, 'opacity': 0.0} -> Final state: {'scale': 1.0, 'opacity': 1.0}. Timing: SPRING (damping: 12.0, stiffness: 150.0, mass: 0.8)
+- **Exit Transition:** none_end_of_video (Rationale: Holds on final frame for social loop playback)
+- **SFX Triggers:** warm_chime_outro at frame 677
+
+--------------------------------------------------------------------------------
+8. REQUIRED ASSETS
+--------------------------------------------------------------------------------
+- **ASSET-001-ICON** (svg_icon): Verified Shield SVG icon representing empirical confirmation [Used by: scene_02]
+- **ASSET-002-DATA** (data_payload): JSON benchmark comparison data for Data: {"Relevance": "96%", "Confidence": "0.99"} [Used by: scene_02, scene_03]
+- **ASSET-003-TERMINAL** (code_snippet): Bash deployment command showing Ollama / vLLM execution [Used by: scene_04]
+- **ASSET-004-AUDIO** (sound_effects): Synthesized UI impacts, typing clacks, and frequency sweep chimes [Used by: scene_01, scene_02, scene_03, scene_04, scene_05]
+- **ASSET-005-BROLL** (generated_footage): B-roll cinematic background footage illustrating Data [Used by: scene_01, scene_03]
+- **ASSET-006-DIAGRAM** (technical_diagram): Micro-architecture and dataflow diagram for Data [Used by: scene_03, scene_04]
+
+--------------------------------------------------------------------------------
+9. PRODUCTION VERIFICATION CHECKLIST
+--------------------------------------------------------------------------------
+[ ] Video renders headlessly with `npx remotion render` with 0 dropped frames.
+[ ] No text overflows the platform-safe boundaries.
+[ ] All spring animations have damping >= 10 to prevent endless oscillation.
+[ ] Audio ducking accurately drops background music during speech.
+[ ] Component is fully typed with zero TypeScript `any` types.
+================================================================================

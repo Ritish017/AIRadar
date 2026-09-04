@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_001_ai_model_launch",
+  "video_identifier": "synthetic_render_001_ai_model_launch.mp4",
+  "model_used": "HYBRID (Omni hardware/cinematic + Remotion streaming specs)",
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "duration_sec": 30.0,
+  "fps": 30.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

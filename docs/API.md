@@ -1,175 +1,131 @@
-# AI Viral Radar — REST API Reference
+# AI Viral Radar V3 — REST API & SSE Reference
 
-The AI Viral Radar backend exposes a versioned, RESTful API running on FastAPI with asynchronous I/O and strict Pydantic v2 validation.
+The **AI Viral Radar V3** backend exposes asynchronous RESTful endpoints and Server-Sent Events (SSE) running on FastAPI.
 
 Base URL: `http://127.0.0.1:8000/api`  
-Interactive Swagger Docs: `http://127.0.0.1:8000/docs`  
-ReDoc: `http://127.0.0.1:8000/redoc`
+Interactive OpenAPI / Swagger: `http://127.0.0.1:8000/docs`
 
 ---
 
-## Endpoints Summary
+## Complete Endpoints Matrix
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/health` | Service health, timestamp, and active provider count |
-| `POST` | `/collect` | Trigger manual ingestion across all data providers |
-| `GET` | `/feed` | Filtered, sorted, and paginated viral AI feed |
-| `GET` | `/trending` | Top 5 viral items and exploding topic clusters |
-| `GET` | `/topics` | Detected topics with momentum and source distribution |
-| `GET` | `/content/{id}` | Detailed content item with analysis and generated variants |
-| `POST` | `/content/{id}/analyze` | Trigger or retrieve cached AI virality breakdown |
-| `POST` | `/content/{id}/generate` | Generate 5 original post variants with voice calibration |
-| `POST` | `/content/{id}/save` | Save story to user library with workflow status |
-| `GET` | `/saved` | List all saved stories and notes |
-| `DELETE` | `/saved/{id}` | Remove story from saved list |
-| `GET` | `/voice-profile` | Fetch user's voice profile guidelines and examples |
-| `POST` | `/voice-profile` | Update user's writing sample and voice profile |
-| `POST` | `/analyze-custom-tweet` | Immediate analysis endpoint for Chrome extension |
+| Domain | Method | Endpoint | Description |
+| :--- | :--- | :--- | :--- |
+| **System** | `GET` | `/health` | Ingestion health, database status, and latency KPIs |
+| **Live Radar** | `GET` | `/events` | List clustered canonical events with latency telemetry |
+| **Live Radar** | `GET` | `/events/live` | **Server-Sent Events (SSE)** real-time breaking events stream |
+| **Live Radar** | `GET` | `/events/{id}` | Detailed event view with timeline and source clustering |
+| **Global News** | `GET` | `/news` | 11-category dedicated Global AI News intelligence center |
+| **Sources** | `GET` | `/sources` | Configurable source registry (Official, News, Research, Community) |
+| **Sources** | `GET` | `/sources/health` | Live operational health and latency monitor for sources |
+| **Trends** | `GET` | `/trends` | Trend radar list with lifecycle stages and early signals |
+| **Trends** | `GET` | `/trends/{id}` | Detailed trend analysis, acceleration, and historical observations |
+| **Trends** | `GET` | `/trends/{id}/gap` | Semantic angle decomposition and content gap analysis |
+| **Trends** | `GET` | `/trend-graph` | Interactive force-directed relationship network graph |
+| **Content Studio**| `POST` | `/content/brief` | Generates pre-generation editorial brief (`ContentBriefData`) |
+| **Content Studio**| `POST` | `/content/all` | **One-Click Multi-Platform Factory** (𝕏, LinkedIn, Instagram, YouTube) |
+| **Content Studio**| `POST` | `/content/x` | 𝕏 10-hook evaluator and 9-post thread generator |
+| **Content Studio**| `POST` | `/content/linkedin`| Long-form executive thought leadership post |
+| **Content Studio**| `POST` | `/content/instagram`| 8-slide visual carousel and 35s Reel concept |
+| **Content Studio**| `POST` | `/content/youtube` | 10 titles, 3 thumbnails, cold open, short & long scripts |
+| **Prompt Lab** | `POST` | `/prompts/omni` | 20-field structured Gemini Omni cinematic prompt compiler |
+| **Prompt Lab** | `POST` | `/prompts/remotion`| React Remotion programmatic animation specification |
+| **Prompt Lab** | `POST` | `/prompts/hyperframes` | HTML5 + GSAP deterministic motion graphics code |
+| **Prompt Lab** | `POST` | `/storyboard` | 6-scene structured video storyboard (0-30s) |
+| **Learning** | `GET` | `/performance/metrics` | User engagement analytics and winning characteristics |
+| **Learning** | `POST` | `/performance/log` | Logs post performance to update `PersonalContentProfile` |
+| **Learning** | `POST` | `/voice/analyze` | Analyzes writing samples to calibrate My Voice tone |
+| **Workflow** | `GET` | `/briefing/daily` | "What Happened While I Was Away?" morning briefing |
+| **Workflow** | `GET` | `/plan-my-day` | Recommended 5-slot daily multi-platform schedule |
+| **Workflow** | `GET/POST`| `/queue` | Editorial queue management (`IDEA` $\to$ `PUBLISHED`) |
+| **Monitors** | `GET/POST`| `/monitors` | Custom topic, domain, and GitHub repository monitors |
+| **Search** | `GET` | `/search` | Unified global search across events, trends, and content |
 
 ---
 
-## Detailed Endpoint Documentation
+## Key V3 Request / Response Specifications
 
-### 1. GET `/feed`
-Retrieves paginated content items with multi-dimensional filtering.
+### 1. Server-Sent Events Stream: `GET /api/events/live`
+Clients subscribe to a persistent HTTP connection (`text/event-stream`). The server pushes new breaking events and keepalive pings without requiring full page refreshes.
 
-**Query Parameters:**
-- `topic` (string, optional): Category filter (`Models`, `Agents`, `Research`, `Startups`, `Robotics`, `Coding`, `Open Source`, `AI Tools`, `Companies`, or `All`).
-- `sort_by` (string, default: `viral`): `viral`, `rising`, `newest`, `engagement`, `velocity`.
-- `time_range` (string, default: `24h`): `15m`, `1h`, `6h`, `24h`, `7d`, `all`.
-- `min_viral_score` (float, optional): Filter by minimum viral score (0-100).
-- `page` (int, default: 1): Page number.
-- `page_size` (int, default: 20): Items per page (max: 100).
-
-**Example Response:**
-```json
-{
-  "total": 42,
-  "page": 1,
-  "page_size": 20,
-  "items": [
-    {
-      "id": "3a82207b-89fc-4876-b31c-3086eb293ab7",
-      "source": "OpenAI",
-      "source_type": "x",
-      "title": "OpenAI releases new reasoning model with native computer use",
-      "content": "OpenAI has officially launched a new lightweight reasoning architecture...",
-      "url": "https://openai.com/index/announcing-reasoning-computer-use",
-      "author": "OpenAI",
-      "author_handle": "@OpenAI",
-      "published_at": "2026-09-02T18:00:00Z",
-      "views": 2400000,
-      "likes": 31200,
-      "reposts": 5800,
-      "replies": 1240,
-      "viral_score": 96.4,
-      "engagement_velocity": 340.0,
-      "topic": "Models",
-      "hook_type": "breaking_news"
-    }
-  ]
+**Example SSE Event:**
+```text
+event: breaking_event
+data: {
+  "id": "e81d42a7-6f19-4820-928f-7c15e8bc41a9",
+  "canonical_title": "OpenAI Announces GPT-5 Orion with Autonomous Tool Loops",
+  "status": "CONFIRMED",
+  "confidence_score": 98.0,
+  "momentum_score": 96.0,
+  "opportunity_score": 94.0,
+  "sources": ["OpenAI", "Reuters", "TechCrunch"],
+  "total_pipeline_latency": 31.2,
+  "published_at": "2026-09-04T12:00:00Z"
 }
 ```
 
 ---
 
-### 2. POST `/content/{id}/analyze`
-Analyzes why an item went viral, extracts key factual claims, and evaluates hook psychology. Results are cached in the database.
-
-**Example Response:**
-```json
-{
-  "summary": "OpenAI launched a reasoning model featuring direct OS computer control, achieving 84.6% on SWE-bench Verified.",
-  "main_claim": "Lightweight reasoning model outperforms previous frontier systems with 42% lower latency.",
-  "why_viral": [
-    "Claims SOTA or outperforms larger established models on key benchmarks",
-    "Sparked debates among practitioners regarding test set contamination vs real gains",
-    "High proof-of-work credibility with reproducible code and weights"
-  ],
-  "hook_type": "milestone",
-  "content_type": "release",
-  "key_facts": [
-    "84.6% success rate on SWE-bench Verified",
-    "42% latency reduction compared to predecessor",
-    "Tier 3 API access activated immediately"
-  ],
-  "important_entities": ["OpenAI", "SWE-bench", "Computer Use"],
-  "audience": "AI Engineers, Technical Founders, and Machine Learning Researchers",
-  "recommended_angle": "Highlight the practical developer implications: how this reduces deployment friction or unlocks new agentic workflows."
-}
-```
-
----
-
-### 3. POST `/content/{id}/generate`
-Generates 5 distinct original post variants while enforcing anti-copy similarity constraints and applying personal voice guidelines.
+### 2. Multi-Platform Generation: `POST /api/content/all`
 
 **Request Body:**
 ```json
 {
-  "tones": ["technical"],
-  "variants": ["news", "hot_take", "educational", "thread", "question"],
-  "length": "medium",
-  "include_voice_profile": true
+  "event_id": "e81d42a7-6f19-4820-928f-7c15e8bc41a9",
+  "angle": "Developer Architecture & Workflow Migration",
+  "audience": "AI Engineers & Systems Builders"
 }
 ```
 
-**Example Response:**
+**Response Body:**
 ```json
-[
-  {
-    "variant_type": "news",
-    "tone": "technical",
-    "length": "medium",
-    "content": "⚡ OpenAI releases new reasoning model with native computer use\n\nOpenAI just unveiled this milestone. The standout detail: 84.6% success rate on SWE-bench Verified.\n\nFull breakdown & docs: https://openai.com/index/announcing-reasoning-computer-use",
-    "thread_items": [],
-    "similarity_score": 0.28,
-    "is_safe": true,
-    "attribution_included": true
-  },
-  {
-    "variant_type": "hot_take",
-    "tone": "technical",
-    "length": "medium",
-    "content": "Hot take on OpenAI releases new reasoning model with native computer use:\n\nEveryone is fixated on the headline metric, but the real leverage is what this does to developer toolchains...",
-    "similarity_score": 0.19,
-    "is_safe": true,
-    "attribution_included": true
-  },
-  {
-    "variant_type": "thread",
-    "tone": "technical",
-    "length": "medium",
-    "content": "1/4 🧵 OpenAI releases new reasoning model is going viral today...",
-    "thread_items": [
-      "1/4 🧵 OpenAI releases new reasoning model is going viral today. Here is the technical breakdown...",
-      "2/4 The core advancement: 84.6% success rate on SWE-bench Verified...",
-      "3/4 Why it matters: Instead of requiring massive compute clusters...",
-      "4/4 Bottom line: Full details and source paper: https://openai.com/..."
+{
+  "suite": {
+    "brief": {
+      "topic": "OpenAI Announces GPT-5 Orion with Autonomous Tool Loops",
+      "angle": "Developer Architecture & Workflow Migration",
+      "hook_strategy": "Contrarian / Architecture Shift",
+      "key_claims": ["Native autonomous reasoning loops without outer orchestrator"],
+      "counterpoint": "Slight token degradation observed on 100k+ multi-turn context"
+    },
+    "x_hooks": [
+      {
+        "hook_text": "Everyone is benchmarking Orion's raw throughput. They're missing the real shift: autonomous agent loops without LangChain.",
+        "hook_score": 94.0,
+        "hook_type": "Contrarian",
+        "curiosity": 95.0,
+        "specificity": 92.0
+      }
     ],
-    "similarity_score": 0.22,
-    "is_safe": true,
-    "attribution_included": true
+    "x_content": {
+      "platform": "x",
+      "single_post": "...",
+      "thread": ["1/9 Hook...", "2/9 Context...", "9/9 CTA..."]
+    },
+    "linkedin_content": {
+      "platform": "linkedin",
+      "content": "The economics of enterprise AI just shifted with today's announcement of Orion..."
+    },
+    "instagram_carousel": {
+      "total_slides": 8,
+      "slides": [
+        {"slide_number": 1, "headline": "...", "visual_direction": "..."}
+      ]
+    },
+    "youtube_content": {
+      "titles": ["Orion Benchmark Breakdown: What OpenAI Didn't Announce"],
+      "thumbnails": [{"subject": "...", "text": "NO ORCHESTRATOR?"}],
+      "short_script": "..."
+    },
+    "quality": {
+      "total_quality_score": 91.5,
+      "is_approved": true,
+      "dimension_scores": {
+        "fact_check": 95.0,
+        "originality": 92.0,
+        "platform_fit": 94.0
+      }
+    }
   }
-]
-```
-
----
-
-### 4. POST `/analyze-custom-tweet`
-Lightweight endpoint for Chrome Extension or user-submitted text.
-
-**Request Body:**
-```json
-{
-  "text": "DeepSeek-V3 weights just dropped on Hugging Face. 671B MoE model matches Llama 3.1 405B on coding.",
-  "author": "Research Lead",
-  "author_handle": "@research_lead",
-  "url": "https://x.com/research_lead/status/123",
-  "likes": 8400,
-  "reposts": 1600,
-  "replies": 320,
-  "views": 450000
 }
 ```

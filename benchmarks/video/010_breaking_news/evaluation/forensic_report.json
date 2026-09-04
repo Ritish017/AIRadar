@@ -1,0 +1,315 @@
+{
+  "analysis_id": "vfa_317d9482",
+  "video_identifier": "synthetic_render_010_breaking_news.mp4",
+  "prompt_readiness_score": 98.5,
+  "expected_executability_score": 92.0,
+  "actual_video_quality_score": 91.6,
+  "overall_verdict": "EXCELLENT",
+  "dimension_scores": {
+    "narrative_clarity": 91.0,
+    "hook_strength": 91.0,
+    "visual_relevance": 97.0,
+    "story_progression": 91.0,
+    "shot_variety": 91.0,
+    "pacing": 92.0,
+    "motion_quality": 92.0,
+    "composition": 91.0,
+    "temporal_consistency": 92.0,
+    "character_consistency": 92.0,
+    "object_consistency": 91.0,
+    "text_accuracy": 92.0,
+    "typography_quality": 92.0,
+    "audio_quality": 92.0,
+    "lip_sync": 91.0,
+    "visual_artifacts": 91.0,
+    "generative_glitches": 91.0,
+    "continuity": 91.0,
+    "platform_fitness": 92.0,
+    "originality": 91.0,
+    "information_density": 91.0,
+    "emotional_impact": 91.0,
+    "professional_polish": 91.0
+  },
+  "dimension_evaluations": [
+    {
+      "dimension_name": "narrative_clarity",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated narrative clarity: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "hook_strength",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated hook strength: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "visual_relevance",
+      "score": 97.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated visual relevance: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "story_progression",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated story progression: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "shot_variety",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated shot variety: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "pacing",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Optimal rhythm: 7 cuts over 35.0s."
+      ]
+    },
+    {
+      "dimension_name": "motion_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Consistent 60fps dynamic camera tracking across all scene intervals."
+      ]
+    },
+    {
+      "dimension_name": "composition",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated composition: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "temporal_consistency",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Smooth linear temporal progression with zero dropped or duplicate frames."
+      ]
+    },
+    {
+      "dimension_name": "character_consistency",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Subject appearance verified consistent across all active scenes."
+      ]
+    },
+    {
+      "dimension_name": "object_consistency",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated object consistency: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "text_accuracy",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Typography renders inside verified platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "typography_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Typography renders inside verified platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "audio_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "48kHz stereo AAC audio present with balanced dynamic range."
+      ]
+    },
+    {
+      "dimension_name": "lip_sync",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated lip sync: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "visual_artifacts",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated visual artifacts: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "generative_glitches",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated generative glitches: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "continuity",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated continuity: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "platform_fitness",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Proper 9:16 composition conforming to platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "originality",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated originality: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "information_density",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated information density: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "emotional_impact",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated emotional impact: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "professional_polish",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated professional polish: within high professional standard."
+      ]
+    }
+  ],
+  "detected_failures": [],
+  "representative_frames": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "percentage": 0,
+      "timecode": "00:00",
+      "description": "Keyframe sample at 0% (0.0s)"
+    },
+    {
+      "frame_index": 90,
+      "timestamp_sec": 3.5,
+      "percentage": 10,
+      "timecode": "00:03",
+      "description": "Keyframe sample at 10% (3.5s)"
+    },
+    {
+      "frame_index": 180,
+      "timestamp_sec": 7.0,
+      "percentage": 20,
+      "timecode": "00:07",
+      "description": "Keyframe sample at 20% (7.0s)"
+    },
+    {
+      "frame_index": 270,
+      "timestamp_sec": 10.5,
+      "percentage": 30,
+      "timecode": "00:10",
+      "description": "Keyframe sample at 30% (10.5s)"
+    },
+    {
+      "frame_index": 360,
+      "timestamp_sec": 14.0,
+      "percentage": 40,
+      "timecode": "00:14",
+      "description": "Keyframe sample at 40% (14.0s)"
+    },
+    {
+      "frame_index": 450,
+      "timestamp_sec": 17.5,
+      "percentage": 50,
+      "timecode": "00:17",
+      "description": "Keyframe sample at 50% (17.5s)"
+    },
+    {
+      "frame_index": 540,
+      "timestamp_sec": 21.0,
+      "percentage": 60,
+      "timecode": "00:21",
+      "description": "Keyframe sample at 60% (21.0s)"
+    },
+    {
+      "frame_index": 630,
+      "timestamp_sec": 24.5,
+      "percentage": 70,
+      "timecode": "00:24",
+      "description": "Keyframe sample at 70% (24.5s)"
+    },
+    {
+      "frame_index": 720,
+      "timestamp_sec": 28.0,
+      "percentage": 80,
+      "timecode": "00:28",
+      "description": "Keyframe sample at 80% (28.0s)"
+    },
+    {
+      "frame_index": 810,
+      "timestamp_sec": 31.5,
+      "percentage": 90,
+      "timecode": "00:31",
+      "description": "Keyframe sample at 90% (31.5s)"
+    },
+    {
+      "frame_index": 900,
+      "timestamp_sec": 35.0,
+      "percentage": 100,
+      "timecode": "00:35",
+      "description": "Keyframe sample at 100% (35.0s)"
+    }
+  ],
+  "extracted_metadata": {
+    "duration_sec": 35.0,
+    "width": 1080,
+    "height": 1920,
+    "aspect_ratio": "9:16",
+    "fps": 30.0,
+    "frame_count": 900,
+    "has_audio": true,
+    "audio_codec": "aac",
+    "bitrate_kbps": 8500,
+    "container_format": "mp4",
+    "scene_cut_count": 7,
+    "average_brightness": 0.45,
+    "contrast_ratio": 0.72
+  },
+  "remediation_actions": []
+}

@@ -1,0 +1,12 @@
+{
+  "generation_id": "gen_009_youtube_explainer",
+  "video_identifier": "synthetic_render_009_youtube_explainer.mp4",
+  "model_used": "HYBRID MULTI-SCENE (Omni cinematic historical timeline + Remotion multi-head attention visualizer)",
+  "resolution": "1920x1080",
+  "aspect_ratio": "16:9",
+  "duration_sec": 120.0,
+  "fps": 30.0,
+  "has_audio": true,
+  "stream_format": "h264/aac_mp4",
+  "bitrate_kbps": 8500
+}

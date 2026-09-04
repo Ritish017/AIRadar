@@ -1,0 +1,172 @@
+{
+  "suite_id": "vcs_88512d0f",
+  "claim_or_narration": "Deterministic DOM diff visualization prevents video compression artifacts.",
+  "topic": "Technical",
+  "platform": "youtube_short",
+  "candidates": [
+    {
+      "concept_id": "vc_a_277788",
+      "representation_type": "hybrid_generative_programmatic",
+      "headline": "Split-Screen Architecture Contrast: Monolithic vs Distributed",
+      "core_visual_metaphor": "Dual-viewport visual comparison of legacy bottleneck vs streamlined throughput",
+      "description": "A clean horizontal or vertical split-screen comparing the standard approach to Technical. Left viewport displays a centralized bottleneck with high congestion latency. Right viewport displays the optimized pathway with low-latency direct routing.",
+      "what_viewer_sees": "Synchronized dual telemetries: the left panel stalls under heavy token payload, while the right panel streams packets instantaneously without buffer bloat.",
+      "what_viewer_understands": "Why Technical provides concrete latency and cost advantages without theoretical fluff.",
+      "information_density": 94.0,
+      "conceptual_clarity": 96.0,
+      "emotional_impact": 82.0,
+      "novelty_score": 88.0,
+      "production_feasibility": 92.0,
+      "recommended_engine": "Hybrid",
+      "asset_requirements": [
+        "Remotion synchronized latency meters",
+        "HyperFrames terminal output"
+      ],
+      "anti_slop_safeguards": [
+        "No meaningless glowing particles",
+        "No generic neon gridlines",
+        "Grounded latency numbers"
+      ],
+      "overall_fit_score": 92.5,
+      "is_recommended": false,
+      "selection_rationale": ""
+    },
+    {
+      "concept_id": "vc_b_78c95a",
+      "representation_type": "environmental_metaphor",
+      "headline": "Macro Physical Translation: Mechanical Friction vs Hydraulic Flow",
+      "core_visual_metaphor": "Industrial fluid dynamic or semiconductor silicon pathing representing computational flow",
+      "description": "Tangible physical reality visualizing Technical. An extreme close-up macro sequence inside an optical compute chamber, where micro-fluidic conduits light up sequentially as data packages traverse without mechanical friction.",
+      "what_viewer_sees": "Pristine macro lens tracking micro-circuitry where photonic pulses traverse conductive tracks. Cool studio illumination with matte black carbon surfaces and crisp reflections.",
+      "what_viewer_understands": "The physical scale and elegant efficiency of next-generation hardware architecture.",
+      "information_density": 86.0,
+      "conceptual_clarity": 90.0,
+      "emotional_impact": 92.0,
+      "novelty_score": 94.0,
+      "production_feasibility": 88.0,
+      "recommended_engine": "Gemini Omni",
+      "asset_requirements": [
+        "35mm anamorphic studio footage",
+        "Photonic pulse reference textures"
+      ],
+      "anti_slop_safeguards": [
+        "Must remain physically plausible",
+        "No floating magical sparks",
+        "No unmotivated camera roll"
+      ],
+      "overall_fit_score": 89.2,
+      "is_recommended": false,
+      "selection_rationale": ""
+    },
+    {
+      "concept_id": "vc_c_c82966",
+      "representation_type": "data_visualization",
+      "headline": "Empirical Benchmark Disruption: Leaderboard Bar Graph Acceleration",
+      "core_visual_metaphor": "Side-by-side empirical performance bars with spring physics and verified delta badges",
+      "description": "Precision data visualization demonstrating Technical. Clean typography and animated SVG bar charts displaying verified metrics (Relevance: 96%, Confidence: 0.97) with verified source attribution badges.",
+      "what_viewer_sees": "A minimalist carbon card where competing model bars plateau at baseline, while the new model bar springs upward with spring physics, locking in the metric delta with an official verification badge.",
+      "what_viewer_understands": "Empirical proof of superiority backed by standardized benchmarks, eliminating marketing skepticism.",
+      "information_density": 98.0,
+      "conceptual_clarity": 98.0,
+      "emotional_impact": 78.0,
+      "novelty_score": 80.0,
+      "production_feasibility": 98.0,
+      "recommended_engine": "Remotion",
+      "asset_requirements": [
+        "SVG benchmark chart",
+        "Platform safe zone typography system",
+        "Audio impact stem"
+      ],
+      "anti_slop_safeguards": [
+        "Pixel-perfect text alignment",
+        "No floating hallucinated glyphs",
+        "Accurate non-distorted proportions"
+      ],
+      "overall_fit_score": 94.2,
+      "is_recommended": true,
+      "selection_rationale": "Selected 'Empirical Benchmark Disruption: Leaderboard Bar Graph Acceleration' because it maximizes conceptual clarity (98%) and information density (98%) for youtube_short while maintaining 100% production feasibility."
+    },
+    {
+      "concept_id": "vc_d_588fa2",
+      "representation_type": "ui_demonstration",
+      "headline": "Live Systems Terminal Trace: CLI Execution & Packet Inspection",
+      "core_visual_metaphor": "Real developer terminal executing verified CLI commands with live output",
+      "description": "Technical UI demonstration. An authentic dark-mode developer workstation terminal where actual shell commands run the inference engine, demonstrating Technical directly from stdout.",
+      "what_viewer_sees": "JetBrains Mono typography typing `curl -s localhost:8000/v1/telemetry | jq` followed by instantaneous structured JSON output and microsecond timestamps.",
+      "what_viewer_understands": "That this technology is usable today in production environments, not just an abstract whitepaper.",
+      "information_density": 92.0,
+      "conceptual_clarity": 92.0,
+      "emotional_impact": 84.0,
+      "novelty_score": 86.0,
+      "production_feasibility": 95.0,
+      "recommended_engine": "HyperFrames",
+      "asset_requirements": [
+        "CSS terminal window frame",
+        "Deterministic seekable GSAP timeline"
+      ],
+      "anti_slop_safeguards": [
+        "No Hollywood fake green hacking code",
+        "Real executable commands",
+        "Zero wall-clock drift"
+      ],
+      "overall_fit_score": 91.2,
+      "is_recommended": false,
+      "selection_rationale": ""
+    },
+    {
+      "concept_id": "vc_e_a253c5",
+      "representation_type": "documentary",
+      "headline": "Investigative Paper Breakdown: Highlighted Equations & Source Figures",
+      "core_visual_metaphor": "Original PDF/arXiv research paper with yellow fluorescent highlight and callout annotation",
+      "description": "Documentary investigative camera moving across the original research publication or official release notice. Key equations and architectural claims are illuminated with precise highlights.",
+      "what_viewer_sees": "Top-down planar camera gliding over a clean publication page; line 14 is highlighted in amber, revealing the exact mathematical breakthrough with an author footnote.",
+      "what_viewer_understands": "The academic and theoretical legitimacy behind the development.",
+      "information_density": 90.0,
+      "conceptual_clarity": 94.0,
+      "emotional_impact": 75.0,
+      "novelty_score": 82.0,
+      "production_feasibility": 96.0,
+      "recommended_engine": "Remotion",
+      "asset_requirements": [
+        "High-res paper screenshot",
+        "Source badge overlay"
+      ],
+      "anti_slop_safeguards": [
+        "Real paper excerpts only",
+        "Legible fonts",
+        "No fake equations"
+      ],
+      "overall_fit_score": 90.3,
+      "is_recommended": false,
+      "selection_rationale": ""
+    }
+  ],
+  "selected_concept": {
+    "concept_id": "vc_c_c82966",
+    "representation_type": "data_visualization",
+    "headline": "Empirical Benchmark Disruption: Leaderboard Bar Graph Acceleration",
+    "core_visual_metaphor": "Side-by-side empirical performance bars with spring physics and verified delta badges",
+    "description": "Precision data visualization demonstrating Technical. Clean typography and animated SVG bar charts displaying verified metrics (Relevance: 96%, Confidence: 0.97) with verified source attribution badges.",
+    "what_viewer_sees": "A minimalist carbon card where competing model bars plateau at baseline, while the new model bar springs upward with spring physics, locking in the metric delta with an official verification badge.",
+    "what_viewer_understands": "Empirical proof of superiority backed by standardized benchmarks, eliminating marketing skepticism.",
+    "information_density": 98.0,
+    "conceptual_clarity": 98.0,
+    "emotional_impact": 78.0,
+    "novelty_score": 80.0,
+    "production_feasibility": 98.0,
+    "recommended_engine": "Remotion",
+    "asset_requirements": [
+      "SVG benchmark chart",
+      "Platform safe zone typography system",
+      "Audio impact stem"
+    ],
+    "anti_slop_safeguards": [
+      "Pixel-perfect text alignment",
+      "No floating hallucinated glyphs",
+      "Accurate non-distorted proportions"
+    ],
+    "overall_fit_score": 94.2,
+    "is_recommended": true,
+    "selection_rationale": "Selected 'Empirical Benchmark Disruption: Leaderboard Bar Graph Acceleration' because it maximizes conceptual clarity (98%) and information density (98%) for youtube_short while maintaining 100% production feasibility."
+  }
+}

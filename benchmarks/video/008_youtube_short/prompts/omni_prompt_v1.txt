@@ -1,0 +1,74 @@
+--- [SHOT: OMNI-SHOT-01 | TIMECODE: 00:00 - 00:03 | DURATION: 3.0s] ---
+PROMPT:
+Medium-wide cinematic tracking shot of high-density computation cluster representing Social Short in a Subterranean server laboratory with matte carbon rack enclosures and polished dark concrete floors. Action: Rapid data pulse propagates through rows of optical interconnects from dark idle to brilliant cyan luminescence. Camera & Lens: 35mm anamorphic prime lens, aperture f/1.8, shallow depth of field, slow controlled dolly push-in, executing a Extreme slow continuous forward tracking shot on a slider. Lighting: 3200K key light, subtle cyan edge separation lighting, volumetric studio haze with restrained contrast. Atmosphere & Color: Deep charcoal (#0f172a), electric cyan (#06b6d4), and surgical white accents, cinematic documentary realism, physically plausible reflections on matte aluminum and glass. Framing: Vertical 9:16, rule-of-thirds composition, central subject remains in sharp focal plane while background softly blurs.
+
+AUDIO:
+Ambience: Low atmospheric sub-bass drone with electronic resonance | SFX: Subtle mechanical activation click transitioning into fluid coolant circulation
+
+CONTINUITY:
+- Baseline dark slate aesthetic with cyan illumination
+- Maintain exact architectural node scale and spatial orientation
+- Preserve identical lighting color temperature across surrounding shots
+
+AVOID:
+- no floating text or holographic letters in empty air, no random unmotivated camera shakes or handheld jitter, no CGI cartoon plasticity or oversaturated neon glow, no distorted human faces or extra morphing fingers, no watermark, logo artifact, or low-resolution textures
+
+--- [SHOT: OMNI-SHOT-02 | TIMECODE: 00:03 - 00:08 | DURATION: 5.0s] ---
+PROMPT:
+Medium close-up with slow dolly push-in of macro semiconductor chip package running Why Unified Memory Makes Apple Silicon 5x Faster for Local LLMs in a Cleanroom test bench, surgical precision tools resting softly blurred in background. Action: Transparent liquid cooling system activates, micro-fluidic coolant streams refract internal copper circuitry. Camera & Lens: 35mm anamorphic prime lens, aperture f/1.8, shallow depth of field, slow controlled dolly push-in, executing a Controlled macro pan drifting 45 degrees across the silicon substrate. Lighting: 3200K key light, subtle cyan edge separation lighting, volumetric studio haze with restrained contrast. Atmosphere & Color: Deep charcoal (#0f172a), electric cyan (#06b6d4), and surgical white accents, cinematic documentary realism, physically plausible reflections on matte aluminum and glass. Framing: Vertical 9:16, rule-of-thirds composition, central subject remains in sharp focal plane while background softly blurs.
+
+AUDIO:
+Ambience: Low atmospheric sub-bass drone with electronic resonance | SFX: Subtle mechanical activation click transitioning into fluid coolant circulation
+
+CONTINUITY:
+- Maintains identical liquid cooling hue and surface reflection fidelity
+- Maintain exact architectural node scale and spatial orientation
+- Preserve identical lighting color temperature across surrounding shots
+
+AVOID:
+- no floating text or holographic letters in empty air, no random unmotivated camera shakes or handheld jitter, no CGI cartoon plasticity or oversaturated neon glow, no distorted human faces or extra morphing fingers, no watermark, logo artifact, or low-resolution textures
+
+--- [SHOT: OMNI-SHOT-03 | TIMECODE: 00:08 - 00:15 | DURATION: 7.0s] ---
+PROMPT:
+Medium close-up with slow dolly push-in of sparse mixture-of-experts routing pathways for Unified memory shares pool between CPU, GPU, and Neural Engine. in a Abstract architectural chamber with dark non-reflective surfaces. Action: Only 8 out of 64 glowing neural interconnects fire simultaneously per data cycle, conserving massive power. Camera & Lens: 35mm anamorphic prime lens, aperture f/1.8, shallow depth of field, slow controlled dolly push-in, executing a Slow 30-degree orbital rotation keeping the central processing node centered. Lighting: 3200K key light, subtle cyan edge separation lighting, volumetric studio haze with restrained contrast. Atmosphere & Color: Deep charcoal (#0f172a), electric cyan (#06b6d4), and surgical white accents, cinematic documentary realism, physically plausible reflections on matte aluminum and glass. Framing: Vertical 9:16, rule-of-thirds composition, central subject remains in sharp focal plane while background softly blurs.
+
+AUDIO:
+Ambience: Low atmospheric sub-bass drone with electronic resonance | SFX: Subtle mechanical activation click transitioning into fluid coolant circulation
+
+CONTINUITY:
+- Exact same node geometry and scale as Shot 01
+- Maintain exact architectural node scale and spatial orientation
+- Preserve identical lighting color temperature across surrounding shots
+
+AVOID:
+- no floating text or holographic letters in empty air, no random unmotivated camera shakes or handheld jitter, no CGI cartoon plasticity or oversaturated neon glow, no distorted human faces or extra morphing fingers, no watermark, logo artifact, or low-resolution textures
+
+--- [SHOT: OMNI-SHOT-04 | TIMECODE: 00:15 - 00:23 | DURATION: 8.0s] ---
+PROMPT:
+Medium close-up with slow dolly push-in of software engineer observing real-time model rollout on workstation in a Modern minimalist engineering studio at dusk, floor-to-ceiling city window softly out of focus. Action: Engineer reviews real-time token throughput metrics; terminal displays clean continuous text stream without hesitation. Camera & Lens: 35mm anamorphic prime lens, aperture f/1.8, shallow depth of field, slow controlled dolly push-in, executing a Over-the-shoulder medium shot with slow lateral push to right. Lighting: 3200K key light, subtle cyan edge separation lighting, volumetric studio haze with restrained contrast. Atmosphere & Color: Deep charcoal (#0f172a), electric cyan (#06b6d4), and surgical white accents, cinematic documentary realism, physically plausible reflections on matte aluminum and glass. Framing: Vertical 9:16, rule-of-thirds composition, central subject remains in sharp focal plane while background softly blurs.
+
+AUDIO:
+Ambience: Low atmospheric sub-bass drone with electronic resonance | SFX: Subtle mechanical activation click transitioning into fluid coolant circulation
+
+CONTINUITY:
+- Workspace monitor displays matching cyan telemetry interface
+- Maintain exact architectural node scale and spatial orientation
+- Preserve identical lighting color temperature across surrounding shots
+
+AVOID:
+- no floating text or holographic letters in empty air, no random unmotivated camera shakes or handheld jitter, no CGI cartoon plasticity or oversaturated neon glow, no distorted human faces or extra morphing fingers, no watermark, logo artifact, or low-resolution textures
+
+--- [SHOT: OMNI-SHOT-05 | TIMECODE: 00:23 - 00:30 | DURATION: 7.0s] ---
+PROMPT:
+Medium close-up with slow dolly push-in of monolithic server cluster transitioning to quiet steady-state operation for Zero-copy tensor buffers eliminate PCIe bottleneck transfer latency. in a Server vault corridor extending into clean one-point perspective vanishing line. Action: Lighting softly dims to ambient standby mode, single glowing indicator light pulses with steady heartbeat rhythm. Camera & Lens: 35mm anamorphic prime lens, aperture f/1.8, shallow depth of field, slow controlled dolly push-in, executing a Slow deliberate pull-back shot receding along central aisle. Lighting: 3200K key light, subtle cyan edge separation lighting, volumetric studio haze with restrained contrast. Atmosphere & Color: Deep charcoal (#0f172a), electric cyan (#06b6d4), and surgical white accents, cinematic documentary realism, physically plausible reflections on matte aluminum and glass. Framing: Vertical 9:16, rule-of-thirds composition, central subject remains in sharp focal plane while background softly blurs.
+
+AUDIO:
+Ambience: Low atmospheric sub-bass drone with electronic resonance | SFX: Subtle mechanical activation click transitioning into fluid coolant circulation
+
+CONTINUITY:
+- Closes the loop back to Shot 01 datacenter environment
+- Maintain exact architectural node scale and spatial orientation
+- Preserve identical lighting color temperature across surrounding shots
+
+AVOID:
+- no floating text or holographic letters in empty air, no random unmotivated camera shakes or handheld jitter, no CGI cartoon plasticity or oversaturated neon glow, no distorted human faces or extra morphing fingers, no watermark, logo artifact, or low-resolution textures

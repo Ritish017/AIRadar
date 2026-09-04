@@ -1,0 +1,198 @@
+{
+  "storyboard_id": "sb_educational_60s",
+  "title": "Educational - Youtube Explainer",
+  "premise": "Reveals why Visualizing Diffusion Attention & Latent Spaces disrupts AI compute economics and how developers deploy it.",
+  "narrative_arc": "Hook Disruption -> Verified Metric Evidence -> Architectural Secret -> Developer Proof -> Strategic Takeaway",
+  "platform": "youtube_explainer",
+  "visual_style": "TECH_DOCUMENTARY",
+  "total_duration_sec": 60.0,
+  "aspect_ratio": "16:9",
+  "hook_candidates": [
+    {
+      "hook_id": "HOOK-A-DATA",
+      "hook_category": "Data & Empirical Stakes",
+      "first_spoken_line": "Your entire AI compute bill just got cut by 70%.",
+      "first_visual": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+      "first_camera_movement": "Aggressive 1.2x continuous push-in on the plunge",
+      "first_on_screen_text": "-70% COMPUTE COSTS",
+      "audio_sfx": "Sub-bass impact boom (80Hz) with sharp digital riser",
+      "curiosity_mechanism": "Instant financial stake for any builder or enterprise",
+      "predicted_retention_score": 94.5,
+      "is_recommended_winner": true
+    },
+    {
+      "hook_id": "HOOK-B-CONTRARIAN",
+      "hook_category": "Contrarian Invalidating",
+      "first_spoken_line": "The biggest AI lab moat just evaporated overnight.",
+      "first_visual": "A massive titanium datacenter vault door swinging wide open to reveal a single lightweight laptop running the exact same model weights.",
+      "first_camera_movement": "Slow majestic horizontal slider tracking shot",
+      "first_on_screen_text": "THE MOAT IS GONE",
+      "audio_sfx": "Heavy mechanical latch release click followed by low vacuum hiss",
+      "curiosity_mechanism": "Invalidates prevailing industry belief that only hyperscalers can compete",
+      "predicted_retention_score": 92.0,
+      "is_recommended_winner": false
+    },
+    {
+      "hook_id": "HOOK-C-BREAKING",
+      "hook_category": "Breaking Technical Insight",
+      "first_spoken_line": "Visualizing just dropped open weights that match closed frontier SOTA.",
+      "first_visual": "Split-screen: Left side shows closed commercial API price tag; right side shows terminal downloading open Apache 2.0 checkpoints.",
+      "first_camera_movement": "Snap push-in to terminal progress bar hitting 100%",
+      "first_on_screen_text": "OPEN WEIGHTS // FRONTIER PARITY",
+      "audio_sfx": "High-pitched data confirmation chirp",
+      "curiosity_mechanism": "Urgent news hook targeting immediate developer action",
+      "predicted_retention_score": 89.0,
+      "is_recommended_winner": false
+    }
+  ],
+  "selected_hook": {
+    "hook_id": "HOOK-A-DATA",
+    "hook_category": "Data & Empirical Stakes",
+    "first_spoken_line": "Your entire AI compute bill just got cut by 70%.",
+    "first_visual": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+    "first_camera_movement": "Aggressive 1.2x continuous push-in on the plunge",
+    "first_on_screen_text": "-70% COMPUTE COSTS",
+    "audio_sfx": "Sub-bass impact boom (80Hz) with sharp digital riser",
+    "curiosity_mechanism": "Instant financial stake for any builder or enterprise",
+    "predicted_retention_score": 94.5,
+    "is_recommended_winner": true
+  },
+  "shots": [
+    {
+      "shot_number": 1,
+      "timecode": "00:00 - 00:10",
+      "duration_sec": 10.0,
+      "shot_type": "Extreme Close-Up",
+      "camera_movement": "Rapid push-in",
+      "visual_objective": "Extreme close-up of a holographic digital balance plunging from $100,000 to $28,000 in bright cyan numerals.",
+      "visual_type": "ILLUSTRATIVE_VISUAL",
+      "subject_action": "Instant visual hook opening",
+      "lighting_and_atmosphere": "High-contrast cinematic key",
+      "on_screen_text": "-70% COMPUTE COSTS",
+      "source_attribution_card": null,
+      "voiceover_beat": "Your entire AI compute bill just got cut by 70%.",
+      "recommended_engine": "Gemini Omni",
+      "complexity_score": 35.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 2,
+      "timecode": "00:10 - 00:20",
+      "duration_sec": 10.0,
+      "shot_type": "Medium Shot",
+      "camera_movement": "Lateral slider tracking",
+      "visual_objective": "Datacenter server pod for Educational",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Server racks illuminate in sequence",
+      "lighting_and_atmosphere": "Cool blue volumetric lighting",
+      "on_screen_text": "EDUCATIONAL // DISRUPTION",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "Here is the context behind Visualizing Diffusion Attention & Latent Spaces.",
+      "recommended_engine": "Veo",
+      "complexity_score": 45.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 3,
+      "timecode": "00:20 - 00:30",
+      "duration_sec": 10.0,
+      "shot_type": "Planar Graphic",
+      "camera_movement": "Locked camera with spring entrance",
+      "visual_objective": "Rigorous benchmark accuracy comparison chart",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Bouncy spring animation shows 94% accuracy",
+      "lighting_and_atmosphere": "Studio lighting",
+      "on_screen_text": "SWE-BENCH VERIFIED: 94.2%",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "The empirical breakthrough: Attention matrix complexity reduced from O(N^2) to O(N)..",
+      "recommended_engine": "Remotion",
+      "complexity_score": 25.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 4,
+      "timecode": "00:30 - 00:40",
+      "duration_sec": 10.0,
+      "shot_type": "Macro Orbit",
+      "camera_movement": "45-degree slow orbit",
+      "visual_objective": "Sparse neural routing mechanism",
+      "visual_type": "METAPHORICAL_VISUAL",
+      "subject_action": "8 of 64 pathways activate with cyan glow",
+      "lighting_and_atmosphere": "Luminous node glow on black",
+      "on_screen_text": "SPARSE ACTIVATION ENGINE",
+      "source_attribution_card": null,
+      "voiceover_beat": "The architectural reason: Video frame generation scales to 8K without VRAM spikes..",
+      "recommended_engine": "Gemini Omni",
+      "complexity_score": 55.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 5,
+      "timecode": "00:40 - 00:50",
+      "duration_sec": 10.0,
+      "shot_type": "Terminal Planar",
+      "camera_movement": "Smooth upward pan",
+      "visual_objective": "Real-time token generation streaming in terminal",
+      "visual_type": "LITERAL_DOCUMENTARY",
+      "subject_action": "Tokens render at 140/sec with zero latency",
+      "lighting_and_atmosphere": "Dark terminal theme",
+      "on_screen_text": "LOCAL STREAM: 140 TOK/S",
+      "source_attribution_card": "Source: Tier-1 Research",
+      "voiceover_beat": "Zero cloud lock-in. Full payoff and local execution.",
+      "recommended_engine": "HyperFrames",
+      "complexity_score": 25.0,
+      "is_split_recommended": false
+    },
+    {
+      "shot_number": 6,
+      "timecode": "00:50 - 00:60",
+      "duration_sec": 10.0,
+      "shot_type": "Center Medium",
+      "camera_movement": "Receding pull-back",
+      "visual_objective": "Summary payoff card with verified source attribution",
+      "visual_type": "ILLUSTRATIVE_VISUAL",
+      "subject_action": "Bookmark card pulses with spring glow",
+      "lighting_and_atmosphere": "Clean dark gradient",
+      "on_screen_text": "COMMUNITY PAYOFF // SAVE & SHARE",
+      "source_attribution_card": null,
+      "voiceover_beat": "Are you deploying this architecture? Share with your team.",
+      "recommended_engine": "Remotion",
+      "complexity_score": 20.0,
+      "is_split_recommended": false
+    }
+  ],
+  "visual_metaphors": [
+    {
+      "technical_concept": "Sparse Mixture-of-Experts Activation",
+      "metaphor_label": "METAPHORICAL_VISUAL",
+      "visual_depiction": "Enormous clockwork gear chamber where only 8 precision cogs engage while 56 cogs glide frictionlessly in reserve.",
+      "rationale": "Prevents abstract invisible matrix multiplication from looking uninteresting on video."
+    },
+    {
+      "technical_concept": "Low-Latency Speculative Decoding",
+      "metaphor_label": "METAPHORICAL_VISUAL",
+      "visual_depiction": "Two parallel speed trains on parallel tracks: a nimble scout train laying tracks seconds ahead of the heavy cargo engine.",
+      "rationale": "Visually communicates draft models verifying tokens ahead of large model verification."
+    }
+  ],
+  "source_attribution_cards": [
+    {
+      "claim": "Attention matrix complexity reduced from O(N^2) to O(N).",
+      "source_card": "Source: Tier-1 Research",
+      "type": "VERIFIED_PRIMARY"
+    },
+    {
+      "claim": "Video frame generation scales to 8K without VRAM spikes.",
+      "source_card": "Source: Tier-1 Research",
+      "type": "VERIFIED_PRIMARY"
+    }
+  ],
+  "character_bible": null,
+  "retention_mechanisms": [
+    "Immediate 1.5s Numerical Disruption (Zero throat-clearing)",
+    "Open Cognitive Loop at second 4 ('The architectural secret no one is reporting')",
+    "Mid-roll Pattern Interrupt at second 15 (Wipe to live terminal proof)",
+    "Auditory Contrast (Sudden music drop during core benchmark revelation)",
+    "High-contrast visual payoffs at the conclusion"
+  ]
+}

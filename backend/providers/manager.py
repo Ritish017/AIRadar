@@ -8,6 +8,8 @@ from sqlalchemy.orm import selectinload
 from backend.providers.firecrawl_provider import firecrawl_provider
 from backend.providers.mock_provider import mock_provider
 from backend.providers.x_provider import x_provider
+from backend.providers.web_acquisition import web_acquisition_provider
+from backend.services.events.event_engine import event_engine
 from backend.services.virality.scorer import virality_scorer
 from backend.services.trends.trend_detector import trend_detector
 from backend.services.trends.trend_momentum import trend_momentum_engine
@@ -28,6 +30,7 @@ class ProviderManager:
     """
 
     def __init__(self):
+        self.web_acquisition = web_acquisition_provider
         self.providers = [
             firecrawl_provider,
             mock_provider,
@@ -37,14 +40,21 @@ class ProviderManager:
     async def ingest_all(self, db: AsyncSession) -> Dict[str, Any]:
         raw_items: List[Dict[str, Any]] = []
 
-        # 1. Fetch items from active providers
+        # 1. Fetch items via centralized WebAcquisitionProvider (Firecrawl + RSS + fallback)
+        try:
+            acquired = await self.web_acquisition.acquire_all(include_rss=True)
+            raw_items.extend(acquired)
+        except Exception as e:
+            logger.warning(f"Web acquisition cycle notice: {e}")
+
+        # Supplement with any provider items if needed
         for provider in self.providers:
-            try:
-                items = await provider.fetch_items()
-                logger.info(f"Provider {provider.name} yielded {len(items)} items")
-                raw_items.extend(items)
-            except Exception as e:
-                logger.error(f"Error fetching from {provider.name}: {e}")
+            if provider.name != "Firecrawl Web Discovery":
+                try:
+                    items = await provider.fetch_items()
+                    raw_items.extend(items)
+                except Exception as e:
+                    logger.debug(f"Provider {provider.name} note: {e}")
 
         # 2. Normalize and deduplicate by URL
         seen_urls = set()
@@ -336,6 +346,13 @@ class ProviderManager:
                         )
                         db.add(mention)
 
+        # 6. Cluster all scored items into canonical Events
+        events_clustered = []
+        try:
+            events_clustered = await event_engine.cluster_items_into_events(scored_items, db)
+        except Exception as e:
+            logger.warning(f"Event clustering notice: {e}")
+
         await db.commit()
 
         return {
@@ -343,7 +360,8 @@ class ProviderManager:
             "deduplicated": len(deduped_items),
             "new_saved": saved_count,
             "updated": updated_count,
-            "trends_detected": len(trend_clusters)
+            "trends_detected": len(trend_clusters),
+            "events_clustered": len(events_clustered)
         }
 
 provider_manager = ProviderManager()

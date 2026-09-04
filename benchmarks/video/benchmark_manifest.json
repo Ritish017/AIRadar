@@ -1,0 +1,102 @@
+[
+  {
+    "id": "001_ai_model_launch",
+    "category": "Product",
+    "title": "Gemini 2.0 Flash Thinking Model Launch",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.3,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID (Omni hardware/cinematic + Remotion streaming specs)"
+  },
+  {
+    "id": "002_benchmark_comparison",
+    "category": "Data",
+    "title": "Frontier AI Benchmark Comparison: SWE-bench & HumanEval",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.3,
+    "verdict": "EXCELLENT",
+    "routing": "REMOTION (Deterministic SVG charts, numerical accuracy)"
+  },
+  {
+    "id": "003_future_scenario",
+    "category": "Cinematic",
+    "title": "Autonomous AI Metropolis 2030",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.6,
+    "verdict": "EXCELLENT",
+    "routing": "GEMINI OMNI / VEO (Photorealistic cinematic realism & temporal camera dolly)"
+  },
+  {
+    "id": "004_technical_interface",
+    "category": "Technical",
+    "title": "Terminal CLI & IDE Autonomous Code Diff Workflow",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.3,
+    "verdict": "EXCELLENT",
+    "routing": "HYPERFRAMES (HTML/GSAP/Monaco DOM deterministic rendering)"
+  },
+  {
+    "id": "005_research_explainer",
+    "category": "Educational",
+    "title": "Visualizing Diffusion Attention & Latent Spaces",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.6,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID (Remotion animated math equations + Omni particle field)"
+  },
+  {
+    "id": "006_character_dialogue",
+    "category": "Character",
+    "title": "Edge vs Cloud AI: The Great Latency Debate",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.3,
+    "verdict": "EXCELLENT",
+    "routing": "VEO / OMNI (Character Bible consistency anchors, shot-reverse-shot dialogue)"
+  },
+  {
+    "id": "007_instagram_reel",
+    "category": "Social Short",
+    "title": "OpenAI o3 Reasoning Breakthrough Revealed",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.6,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID (Veo visual hook + Remotion safe-zone kinetic typography)"
+  },
+  {
+    "id": "008_youtube_short",
+    "category": "Social Short",
+    "title": "Why Unified Memory Makes Apple Silicon 5x Faster for Local LLMs",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.5,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID (Omni macro semiconductor cinematography + Remotion bandwidth gauge)"
+  },
+  {
+    "id": "009_youtube_explainer",
+    "category": "Long-form",
+    "title": "The Complete History and Architecture of Transformer Attention",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 90.1,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID MULTI-SCENE (Omni cinematic historical timeline + Remotion multi-head attention visualizer)"
+  },
+  {
+    "id": "010_breaking_news",
+    "category": "News",
+    "title": "DeepSeek R1 Open-Weights Release Shocks Global AI Ecosystem",
+    "prompt_readiness": 98.5,
+    "expected_executability": 92.0,
+    "actual_video_quality": 91.6,
+    "verdict": "EXCELLENT",
+    "routing": "HYBRID (Remotion verified headline quotes & cost bars + Documentary archival footage)"
+  }
+]

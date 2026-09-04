@@ -1,0 +1,347 @@
+================================================================================
+COPY THIS INTO A HYPERFRAMES CODING AGENT
+================================================================================
+You are an expert HyperFrames engineer and DOM motion graphics specialist.
+Your goal is to render a deterministic, seekable HTML5 motion composition.
+
+--------------------------------------------------------------------------------
+1. COMPOSITION METADATA
+--------------------------------------------------------------------------------
+- ID: hf_product_30s
+- Dimensions: 1080x1920 (9:16)
+- Frame Rate: 60 FPS
+- Duration: 30.0s (1800 frames)
+
+--------------------------------------------------------------------------------
+2. DETERMINISM & HYPERFRAMES RULES
+--------------------------------------------------------------------------------
+- HTML is the absolute source of truth for DOM hierarchy.
+- CSS controls visual appearance, fonts, colors, and borders.
+- GSAP controls animation: MUST use `gsap.timeline({ paused: true })`.
+- The timeline MUST be registered on `window.__timelines['hf_product_30s'] = tl`.
+- The headless renderer will call `window.renderFrame(timeInSeconds)`.
+- Use ABSOLUTE timeline positions (the final argument in `.to(...)`). NEVER use relative chaining.
+- FORBIDDEN: DO NOT use setTimeout, setInterval, requestAnimationFrame, Date.now(), or unseeded Math.random(). Must remain 100% deterministic and seekable.
+
+--------------------------------------------------------------------------------
+3. HTML MARKUP
+--------------------------------------------------------------------------------
+```html
+<div class="hyperframe-container" id="hf_product_30s" style="width: 1080px; height: 1920px;">
+  <!-- Ambient background glow -->
+  <div class="glow-orb glow-cyan"></div>
+  <div class="glow-orb glow-indigo"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header Category Badge -->
+  <div class="badge-container">
+    <span class="badge-pill">VERIFIED BREAKTHROUGH</span>
+    <span class="live-indicator">LIVE TELEMETRY</span>
+  </div>
+
+  <!-- Main Focal Headline -->
+  <div class="headline-container">
+    <h1 class="main-headline">Gemini 2.0 Flash Thinking Model Launch</h1>
+    <p class="sub-headline">Product verified performance benchmark</p>
+  </div>
+
+  <!-- Central Primary Metric HUD Card -->
+  <div class="metric-hud-card">
+    <div class="card-header">
+      <span class="card-tag">EMPIRICAL DELTA</span>
+      <span class="card-source">SOURCE: VERIFIED BENCHMARK</span>
+    </div>
+    <div class="card-metric-value">+340%</div>
+    <div class="card-metric-label">Throughput Improvement</div>
+    <div class="metric-progress-bar">
+      <div class="metric-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- Secondary Proof Ticker / Terminal -->
+  <div class="terminal-preview-card">
+    <div class="terminal-header">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">runtime_eval.sh</span>
+    </div>
+    <div class="terminal-body">
+      <span class="code-prompt">$</span> <span class="code-text">curl -s localhost:8000/v1/models | jq '.status'</span>
+      <div class="code-output">> "SERVING: 140.4 tokens/sec (fp8_gemm)"</div>
+    </div>
+  </div>
+
+  <!-- Footer Call to Action -->
+  <div class="footer-action-bar">
+    <div class="footer-icon">★</div>
+    <div class="footer-cta-text">Bookmark this benchmark breakdown // Share with engineering team</div>
+  </div>
+</div>
+```
+
+--------------------------------------------------------------------------------
+4. CSS STYLES
+--------------------------------------------------------------------------------
+```css
+/* HyperFrames Scoped Styling */
+#hf_product_30s.hyperframe-root {
+  position: relative;
+  overflow: hidden;
+  background-color: #080c14;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #f8fafc;
+  box-sizing: border-box;
+}
+
+#hf_product_30s .glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+#hf_product_30s .glow-cyan {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+  top: 10%;
+  left: 20%;
+}
+
+#hf_product_30s .glow-indigo {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  bottom: 15%;
+  right: 10%;
+}
+
+#hf_product_30s .grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  pointer-events: none;
+}
+
+#hf_product_30s .badge-container {
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hf_product_30s .badge-pill {
+  background: #f43f5e;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 8px 24px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+#hf_product_30s .live-indicator {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  color: #38bdf8;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+#hf_product_30s .headline-container {
+  position: absolute;
+  top: 240px;
+  left: 80px;
+  right: 80px;
+}
+
+#hf_product_30s .main-headline {
+  font-size: 78px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+#hf_product_30s .sub-headline {
+  font-size: 34px;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 0;
+}
+
+#hf_product_30s .metric-hud-card {
+  position: absolute;
+  top: 680px;
+  left: 80px;
+  right: 80px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 36px;
+  padding: 48px;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 24px 64px -12px rgba(0, 0, 0, 0.6);
+}
+
+#hf_product_30s .card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+#hf_product_30s .card-metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 140px;
+  font-weight: 900;
+  line-height: 1.0;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+#hf_product_30s .card-metric-label {
+  font-size: 36px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 28px;
+}
+
+#hf_product_30s .metric-progress-bar {
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+#hf_product_30s .metric-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #06b6d4, #38bdf8);
+  border-radius: 9999px;
+}
+
+#hf_product_30s .terminal-preview-card {
+  position: absolute;
+  top: 1240px;
+  left: 80px;
+  right: 80px;
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+#hf_product_30s .terminal-header {
+  background: #0f172a;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#hf_product_30s .terminal-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+#hf_product_30s .terminal-dot.red { background: #f43f5e; }
+#hf_product_30s .terminal-dot.yellow { background: #f59e0b; }
+#hf_product_30s .terminal-dot.green { background: #10b981; }
+
+#hf_product_30s .terminal-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  color: #64748b;
+  margin-left: 8px;
+}
+
+#hf_product_30s .terminal-body {
+  padding: 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+#hf_product_30s .code-prompt { color: #06b6d4; font-weight: 700; }
+#hf_product_30s .code-output { color: #34d399; margin-top: 12px; font-weight: 600; }
+
+#hf_product_30s .footer-action-bar {
+  position: absolute;
+  bottom: 120px;
+  left: 80px;
+  right: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#hf_product_30s .footer-icon {
+  font-size: 36px;
+  color: #f59e0b;
+}
+
+#hf_product_30s .footer-cta-text {
+  font-size: 26px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+```
+
+--------------------------------------------------------------------------------
+5. DETERMINISTIC GSAP TIMELINE CODE
+--------------------------------------------------------------------------------
+```javascript
+// HyperFrames Deterministic GSAP Timeline Contract
+// Rules: timeline is paused, registered on window.__timelines, uses absolute positions
+window.__timelines = window.__timelines || {};
+
+const root = document.querySelector("#hf_product_30s");
+if (!root) throw new Error("HyperFrames composition root '#hf_product_30s' not found.");
+
+// Set initial invisible states
+gsap.set("#hf_product_30s .badge-container", { opacity: 0, scale: 0.8, y: -20 });
+gsap.set("#hf_product_30s .main-headline", { opacity: 0, y: 40 });
+gsap.set("#hf_product_30s .sub-headline", { opacity: 0, y: 20 });
+gsap.set("#hf_product_30s .metric-hud-card", { opacity: 0, y: 80, scale: 0.95 });
+gsap.set("#hf_product_30s .metric-progress-fill", { width: "0%" });
+gsap.set("#hf_product_30s .terminal-preview-card", { opacity: 0, y: 60 });
+gsap.set("#hf_product_30s .code-output", { opacity: 0 });
+gsap.set("#hf_product_30s .footer-action-bar", { opacity: 0, scale: 0.9 });
+
+// Construct deterministic paused timeline
+const tl = gsap.timeline({ paused: true });
+
+tl.to("#hf_product_30s .badge-container", { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.2)
+  .to("#hf_product_30s .main-headline", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.5)
+  .to("#hf_product_30s .sub-headline", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.8)
+  .to("#hf_product_30s .metric-hud-card", { opacity: 1, y: 0, scale: 1, duration: 1.0, ease: "power4.out" }, 1.5)
+  .to("#hf_product_30s .metric-progress-fill", { width: "86%", duration: 1.4, ease: "power2.inOut" }, 2.2)
+  .to("#hf_product_30s .terminal-preview-card", { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 4.0)
+  .to("#hf_product_30s .code-output", { opacity: 1, duration: 0.1, ease: "none" }, 5.2)
+  .to("#hf_product_30s .footer-action-bar", { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.4)" }, 7.0);
+
+// Expose timeline and frame seeker to HyperFrames renderer
+window.__timelines["hf_product_30s"] = tl;
+window.renderFrame = function(timeInSeconds) {
+  tl.seek(timeInSeconds);
+};
+
+```
+================================================================================

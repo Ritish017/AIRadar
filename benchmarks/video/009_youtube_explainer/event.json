@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_transformer_architecture_legacy",
+  "headline": "Eight Years Since Attention Is All You Need: Architecture Retrospective",
+  "summary": "Deep architectural retrospective tracking how self-attention scaled from language translation to multi-modal world models.",
+  "source_url": "https://arxiv.org/abs/1706.03762",
+  "source_tier": "Tier-1 Foundational",
+  "confidence": 1.0,
+  "key_facts": [
+    "Original paper published June 2017 by Vaswani et al.",
+    "Replaced recurrent sequence processing with parallel self-attention.",
+    "Now serves as foundational architecture across LLMs, diffusion, and robotics."
+  ]
+}

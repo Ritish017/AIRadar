@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Viral Radar - Trend Intelligence</title>
+  <title>AI Viral Radar V3 - Intelligence Copilot</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,8 +12,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     body {
-      width: 400px;
-      min-height: 560px;
+      width: 420px;
+      min-height: 580px;
       max-height: 600px;
       background: #070a12;
       color: #f1f5f9;
@@ -22,7 +22,7 @@
       overflow-x: hidden;
     }
     header {
-      padding: 12px 16px;
+      padding: 10px 14px;
       background: #0d1322;
       border-bottom: 1px solid #1e294b;
       display: flex;
@@ -36,20 +36,21 @@
     }
     .brand-title {
       font-size: 13px;
-      font-weight: 800;
-      background: linear-gradient(to right, #06b6d4, #818cf8);
+      font-weight: 900;
+      background: linear-gradient(to right, #f59e0b, #ec4899, #818cf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -0.3px;
     }
-    .badge-v2 {
+    .badge-v3 {
       font-size: 9px;
-      font-weight: 700;
-      background: rgba(6, 182, 212, 0.15);
-      color: #22d3ee;
-      border: 1px solid rgba(6, 182, 212, 0.3);
+      font-weight: 800;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
       padding: 1px 5px;
       border-radius: 4px;
+      font-family: monospace;
     }
     .btn-icon {
       background: #131a2e;
@@ -64,85 +65,31 @@
       background: #1e294b;
       color: #fff;
     }
-    /* Tab Switcher */
+    /* V3 Four Tabs */
     .nav-tabs {
       display: flex;
       background: #0d1322;
       border-bottom: 1px solid #1e294b;
-      padding: 6px 12px;
-      gap: 6px;
+      padding: 6px 10px;
+      gap: 4px;
     }
     .tab-btn {
       flex: 1;
-      padding: 5px 8px;
+      padding: 6px 4px;
       background: transparent;
       border: none;
       border-radius: 6px;
       color: #94a3b8;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
+      font-family: monospace;
       cursor: pointer;
+      text-align: center;
     }
     .tab-btn.active {
       background: #1e294b;
-      color: #06b6d4;
-    }
-
-    /* Opportunity Banner */
-    .opp-banner {
-      margin: 10px 12px 4px 12px;
-      padding: 12px;
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(99, 102, 241, 0.15));
-      border: 1px solid rgba(6, 182, 212, 0.4);
-      border-radius: 10px;
-    }
-    .opp-banner-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    .opp-banner-tag {
-      font-size: 9px;
-      font-weight: 800;
-      color: #38bdf8;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    .opp-score-pill {
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: rgba(16, 185, 129, 0.2);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.4);
-    }
-    .opp-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 4px;
-    }
-    .opp-meta {
-      font-size: 10px;
-      color: #94a3b8;
-      margin-bottom: 8px;
-      line-height: 1.35;
-    }
-    .opp-btn-action {
-      width: 100%;
-      padding: 7px 10px;
-      border-radius: 6px;
-      background: linear-gradient(to right, #06b6d4, #3b82f6);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-    }
-    .opp-btn-action:hover {
-      opacity: 0.92;
+      color: #fbbf24;
+      border-bottom: 2px solid #f59e0b;
     }
 
     .feed-container {
@@ -153,7 +100,7 @@
       flex-direction: column;
       gap: 8px;
     }
-    .feed-card {
+    .card {
       background: rgba(19, 26, 46, 0.7);
       border: 1px solid #1e294b;
       border-radius: 8px;
@@ -165,53 +112,59 @@
       justify-content: space-between;
       margin-bottom: 4px;
     }
-    .viral-pill {
+    .pill {
       font-size: 9px;
       font-weight: 800;
-      padding: 1px 5px;
+      padding: 1px 6px;
       border-radius: 4px;
-      background: rgba(6, 182, 212, 0.15);
-      color: #22d3ee;
-      border: 1px solid rgba(6, 182, 212, 0.3);
+      font-family: monospace;
     }
-    .card-source {
-      font-size: 10px;
-      color: #94a3b8;
+    .pill-confirmed {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .pill-exploding {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
     }
     .card-title {
-      font-size: 11.5px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 700;
       color: #fff;
       line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .card-desc {
+      font-size: 10.5px;
+      color: #cbd5e1;
+      line-height: 1.4;
       margin-bottom: 6px;
     }
-    .card-actions {
+    .card-meta {
+      font-size: 9.5px;
+      color: #94a3b8;
+      font-family: monospace;
       display: flex;
-      gap: 6px;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 6px;
-    }
-    .btn-action {
-      flex: 1;
-      padding: 5px 8px;
-      border-radius: 5px;
-      font-size: 10px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      border: none;
-    }
-    .btn-analyze {
-      background: #1e294b;
-      color: #cbd5e1;
-      border: 1px solid #2d375e;
+      border-top: 1px solid #1e294b;
+      padding-top: 5px;
     }
     .btn-create {
-      background: #0284c7;
-      color: #fff;
+      background: linear-gradient(to right, #f59e0b, #ea580c);
+      color: #000;
+      font-weight: 800;
+      font-size: 10px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
     }
-
     footer {
-      padding: 8px 16px;
+      padding: 8px 14px;
       background: #0d1322;
       border-top: 1px solid #1e294b;
       display: flex;
@@ -224,57 +177,34 @@
       text-decoration: none;
       font-weight: 600;
     }
-    #popup-modal {
-      display: none;
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      padding: 14px;
-      z-index: 100;
-      overflow-y: auto;
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="brand">
-      <span class="brand-title">⚡ AI VIRAL RADAR</span>
-      <span class="badge-v2">V2 ENGINE</span>
+      <span class="brand-title">AI VIRAL RADAR</span>
+      <span class="badge-v3">V3 LIVE</span>
     </div>
     <button id="btn-refresh" class="btn-icon">↻ Sync</button>
   </header>
 
-  <!-- Navigation Tabs -->
+  <!-- V3 Tabs: LIVE, TRENDS, OPPORTUNITIES, CREATE -->
   <div class="nav-tabs">
-    <button id="tab-opps" class="tab-btn active">⚡ Opportunities</button>
-    <button id="tab-radar" class="tab-btn">📡 Trend Radar</button>
-    <button id="tab-feed" class="tab-btn">📰 Feed</button>
+    <button id="tab-live" class="tab-btn active">⚡ LIVE</button>
+    <button id="tab-trends" class="tab-btn">📈 TRENDS</button>
+    <button id="tab-opps" class="tab-btn">🎯 OPPS</button>
+    <button id="tab-create" class="tab-btn">✍ CREATE</button>
   </div>
 
-  <!-- Top Opportunity Highlight Banner -->
-  <div id="top-opp-banner" class="opp-banner">
-    <div class="opp-banner-top">
-      <span class="opp-banner-tag">⚡ YOUR BEST OPPORTUNITY</span>
-      <span id="opp-score" class="opp-score-pill">Score 94</span>
-    </div>
-    <div id="opp-title" class="opp-title">DeepSeek V3 Architecture & Benchmarks</div>
-    <div id="opp-meta" class="opp-meta">
-      <strong>Action:</strong> <span style="color: #34d399;">POST NOW</span> • Accelerating (+184%) • Low Competition
-    </div>
-    <button id="opp-create-btn" class="opp-btn-action">🚀 Create Post With Best Angle</button>
-  </div>
-
-  <div id="feed-container" class="feed-container">
-    <div class="loading-state" style="padding: 20px; text-align: center; color: #94a3b8; font-size: 11px;">
-      Loading active trend intelligence...
+  <div id="content-container" class="feed-container">
+    <div style="padding: 20px; text-align: center; color: #94a3b8; font-size: 11px;">
+      Connecting to local intelligence engine...
     </div>
   </div>
-
-  <div id="popup-modal"></div>
 
   <footer>
-    <a href="http://localhost:5173" target="_blank" id="link-dashboard">Open Web Dashboard ↗</a>
-    <a href="../options/options.html" id="link-settings">Settings ⚙</a>
+    <a href="http://localhost:5173" target="_blank" id="link-dashboard">Terminal Dashboard ↗</a>
+    <span style="font-size: 10px; color: #64748b; font-family: monospace;">Time-to-Radar: ~28s</span>
   </footer>
 
   <script src="popup.js"></script>

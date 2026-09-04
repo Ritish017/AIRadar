@@ -1,0 +1,16 @@
+{
+  "total_failures": 0,
+  "critical_count": 0,
+  "high_count": 0,
+  "medium_count": 0,
+  "low_count": 0,
+  "category_breakdown": {
+    "Generation": 0,
+    "Continuity": 0,
+    "Story": 0,
+    "Technical": 0,
+    "Creative": 0
+  },
+  "classified_failures": [],
+  "highest_priority_operator": "maintain_current_spec"
+}

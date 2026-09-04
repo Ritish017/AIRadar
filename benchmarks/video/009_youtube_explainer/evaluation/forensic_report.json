@@ -1,0 +1,326 @@
+{
+  "analysis_id": "vfa_02884a37",
+  "video_identifier": "synthetic_render_009_youtube_explainer.mp4",
+  "prompt_readiness_score": 98.5,
+  "expected_executability_score": 92.0,
+  "actual_video_quality_score": 90.1,
+  "overall_verdict": "EXCELLENT",
+  "dimension_scores": {
+    "narrative_clarity": 96.0,
+    "hook_strength": 91.0,
+    "visual_relevance": 91.0,
+    "story_progression": 97.0,
+    "shot_variety": 91.0,
+    "pacing": 52.0,
+    "motion_quality": 92.0,
+    "composition": 91.0,
+    "temporal_consistency": 92.0,
+    "character_consistency": 92.0,
+    "object_consistency": 91.0,
+    "text_accuracy": 92.0,
+    "typography_quality": 92.0,
+    "audio_quality": 92.0,
+    "lip_sync": 91.0,
+    "visual_artifacts": 91.0,
+    "generative_glitches": 91.0,
+    "continuity": 91.0,
+    "platform_fitness": 92.0,
+    "originality": 91.0,
+    "information_density": 91.0,
+    "emotional_impact": 91.0,
+    "professional_polish": 91.0
+  },
+  "dimension_evaluations": [
+    {
+      "dimension_name": "narrative_clarity",
+      "score": 96.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated narrative clarity: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "hook_strength",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated hook strength: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "visual_relevance",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated visual relevance: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "story_progression",
+      "score": 97.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated story progression: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "shot_variety",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated shot variety: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "pacing",
+      "score": 52.0,
+      "status": "FAIL",
+      "evidence": [
+        "Excessive shot transitions (16 cuts in 120.0s); exceeds retention pacing."
+      ]
+    },
+    {
+      "dimension_name": "motion_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Consistent 60fps dynamic camera tracking across all scene intervals."
+      ]
+    },
+    {
+      "dimension_name": "composition",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated composition: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "temporal_consistency",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Smooth linear temporal progression with zero dropped or duplicate frames."
+      ]
+    },
+    {
+      "dimension_name": "character_consistency",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Subject appearance verified consistent across all active scenes."
+      ]
+    },
+    {
+      "dimension_name": "object_consistency",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated object consistency: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "text_accuracy",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Typography renders inside verified platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "typography_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Typography renders inside verified platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "audio_quality",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "48kHz stereo AAC audio present with balanced dynamic range."
+      ]
+    },
+    {
+      "dimension_name": "lip_sync",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated lip sync: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "visual_artifacts",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated visual artifacts: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "generative_glitches",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated generative glitches: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "continuity",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated continuity: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "platform_fitness",
+      "score": 92.0,
+      "status": "PASS",
+      "evidence": [
+        "Proper 16:9 composition conforming to platform safe boundaries."
+      ]
+    },
+    {
+      "dimension_name": "originality",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated originality: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "information_density",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated information density: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "emotional_impact",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated emotional impact: within high professional standard."
+      ]
+    },
+    {
+      "dimension_name": "professional_polish",
+      "score": 91.0,
+      "status": "PASS",
+      "evidence": [
+        "Evaluated professional polish: within high professional standard."
+      ]
+    }
+  ],
+  "detected_failures": [
+    {
+      "id": "FAIL_RAPID_PACING",
+      "category": "Story",
+      "dimension": "pacing",
+      "severity": "Medium",
+      "description": "Shot pacing exceeds viewer cognitive absorption capacity.",
+      "recommended_fix": "Lengthen shot holds to minimum 2.5s per core narrative beat."
+    }
+  ],
+  "representative_frames": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "percentage": 0,
+      "timecode": "00:00",
+      "description": "Keyframe sample at 0% (0.0s)"
+    },
+    {
+      "frame_index": 90,
+      "timestamp_sec": 12.0,
+      "percentage": 10,
+      "timecode": "00:12",
+      "description": "Keyframe sample at 10% (12.0s)"
+    },
+    {
+      "frame_index": 180,
+      "timestamp_sec": 24.0,
+      "percentage": 20,
+      "timecode": "00:24",
+      "description": "Keyframe sample at 20% (24.0s)"
+    },
+    {
+      "frame_index": 270,
+      "timestamp_sec": 36.0,
+      "percentage": 30,
+      "timecode": "00:36",
+      "description": "Keyframe sample at 30% (36.0s)"
+    },
+    {
+      "frame_index": 360,
+      "timestamp_sec": 48.0,
+      "percentage": 40,
+      "timecode": "00:48",
+      "description": "Keyframe sample at 40% (48.0s)"
+    },
+    {
+      "frame_index": 450,
+      "timestamp_sec": 60.0,
+      "percentage": 50,
+      "timecode": "00:60",
+      "description": "Keyframe sample at 50% (60.0s)"
+    },
+    {
+      "frame_index": 540,
+      "timestamp_sec": 72.0,
+      "percentage": 60,
+      "timecode": "00:72",
+      "description": "Keyframe sample at 60% (72.0s)"
+    },
+    {
+      "frame_index": 630,
+      "timestamp_sec": 84.0,
+      "percentage": 70,
+      "timecode": "00:84",
+      "description": "Keyframe sample at 70% (84.0s)"
+    },
+    {
+      "frame_index": 720,
+      "timestamp_sec": 96.0,
+      "percentage": 80,
+      "timecode": "00:96",
+      "description": "Keyframe sample at 80% (96.0s)"
+    },
+    {
+      "frame_index": 810,
+      "timestamp_sec": 108.0,
+      "percentage": 90,
+      "timecode": "00:108",
+      "description": "Keyframe sample at 90% (108.0s)"
+    },
+    {
+      "frame_index": 900,
+      "timestamp_sec": 120.0,
+      "percentage": 100,
+      "timecode": "00:120",
+      "description": "Keyframe sample at 100% (120.0s)"
+    }
+  ],
+  "extracted_metadata": {
+    "duration_sec": 120.0,
+    "width": 1920,
+    "height": 1080,
+    "aspect_ratio": "16:9",
+    "fps": 30.0,
+    "frame_count": 900,
+    "has_audio": true,
+    "audio_codec": "aac",
+    "bitrate_kbps": 8500,
+    "container_format": "mp4",
+    "scene_cut_count": 16,
+    "average_brightness": 0.45,
+    "contrast_ratio": 0.72
+  },
+  "remediation_actions": [
+    "Lengthen shot holds to minimum 2.5s per core narrative beat."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "event_id": "evt_gemini_2_flash",
+  "headline": "Google Launches Gemini 2.0 Flash with Built-in Real-Time Reasoning",
+  "summary": "Google unveils Gemini 2.0 Flash Thinking Mode with native multimodal streaming, sub-second latency, and agentic tool use at scale.",
+  "source_url": "https://blog.google/technology/ai/gemini-2-0-flash-announcement",
+  "source_tier": "Tier-1 Official",
+  "confidence": 0.98,
+  "key_facts": [
+    "Gemini 2.0 Flash features native real-time audio and vision streaming.",
+    "Thinking mode outputs intermediate chain-of-thought tokens.",
+    "Latency is reduced by 60% compared to previous generations."
+  ]
+}

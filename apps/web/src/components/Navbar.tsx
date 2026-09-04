@@ -1,14 +1,18 @@
 import React from "react";
-import { Flame, RefreshCw, Bookmark, Mic, LayoutGrid, Radio, Zap, Activity } from "lucide-react";
+import { 
+  Flame, RefreshCw, Bookmark, Mic, Globe, Radio, 
+  Zap, Activity, Share2, Sparkles, SlidersHorizontal, Film
+} from "lucide-react";
+
+export type V3NavTab = "radar" | "news" | "graph" | "opportunities" | "video" | "voice" | "saved";
 
 interface NavbarProps {
-  activeTab: "opportunities" | "radar" | "feed" | "overview" | "saved" | "voice";
-  setActiveTab: (tab: "opportunities" | "radar" | "feed" | "overview" | "saved" | "voice") => void;
+  activeTab: V3NavTab;
+  setActiveTab: (tab: V3NavTab) => void;
   savedCount: number;
   onRefresh: () => void;
   onWhatShouldIPost: () => void;
   isRefreshing: boolean;
-  isDemoMode?: boolean;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -18,123 +22,130 @@ export const Navbar: React.FC<NavbarProps> = ({
   onRefresh,
   onWhatShouldIPost,
   isRefreshing,
-  isDemoMode = true,
 }) => {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-800/80 glass-panel">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
-        {/* Brand & Tagline */}
+    <nav className="border-b border-slate-800 bg-[#090d16]/95 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-2">
+        {/* Brand */}
         <div className="flex items-center space-x-3 shrink-0">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center">
-            <div className="w-full h-full bg-[#090d16] rounded-[10px] flex items-center justify-center">
-              <Zap className="w-5 h-5 text-cyan-400" />
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 p-0.5 shadow-md flex items-center justify-center">
+            <div className="w-full h-full bg-[#090d16] rounded-[6px] flex items-center justify-center">
+              <Zap className="w-4 h-4 text-amber-400" />
             </div>
           </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
-                AI VIRAL RADAR
-              </span>
-              <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-                V2 ENGINE
-              </span>
-            </div>
-            <p className="text-xs text-slate-400 hidden sm:block">
-              Trend Intelligence & Content Opportunity Engine
-            </p>
+          <div className="flex items-center space-x-2">
+            <span className="font-black text-sm tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+              AI VIRAL RADAR
+            </span>
+            <span className="inline-flex items-center px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+              V3 OS
+            </span>
           </div>
         </div>
 
         {/* Center Navigation Tabs */}
-        <nav className="flex items-center space-x-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800 overflow-x-auto">
-          <button
-            onClick={() => setActiveTab("opportunities")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === "opportunities"
-                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-sm"
-                : "text-slate-300 hover:text-white hover:bg-slate-800/60"
-            }`}
-          >
-            <Zap className="w-3.5 h-3.5 text-amber-300" />
-            <span>⚡ Opportunities</span>
-          </button>
-
+        <div className="flex items-center space-x-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800 overflow-x-auto text-xs">
           <button
             onClick={() => setActiveTab("radar")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1.5 transition-all cursor-pointer ${
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
               activeTab === "radar"
-                ? "bg-cyan-600 text-white shadow-sm"
-                : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
+                ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
+                : "text-slate-400 hover:text-slate-200"
             }`}
           >
-            <Activity className="w-3.5 h-3.5" />
-            <span>Trend Radar</span>
+            <Zap className="w-3.5 h-3.5 text-amber-400" />
+            <span>Live Radar</span>
           </button>
 
           <button
-            onClick={() => setActiveTab("feed")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === "feed"
-                ? "bg-cyan-600 text-white shadow-sm"
-                : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
+            onClick={() => setActiveTab("news")}
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
+              activeTab === "news"
+                ? "bg-sky-500/20 text-sky-300 border border-sky-500/40"
+                : "text-slate-400 hover:text-slate-200"
             }`}
           >
-            <Radio className="w-3.5 h-3.5" />
-            <span>Feed</span>
+            <Globe className="w-3.5 h-3.5 text-sky-400" />
+            <span>Global News</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("graph")}
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
+              activeTab === "graph"
+                ? "bg-violet-500/20 text-violet-300 border border-violet-500/40"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            <Share2 className="w-3.5 h-3.5 text-violet-400" />
+            <span>Trend Graph</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("opportunities")}
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
+              activeTab === "opportunities"
+                ? "bg-rose-500/20 text-rose-300 border border-rose-500/40"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            <Flame className="w-3.5 h-3.5 text-rose-400" />
+            <span>Opportunities</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("video")}
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
+              activeTab === "video"
+                ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            <Film className="w-3.5 h-3.5 text-amber-400" />
+            <span>Video Director</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("voice")}
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition ${
+              activeTab === "voice"
+                ? "bg-indigo-500/20 text-indigo-300 border border-indigo-500/40"
+                : "text-slate-400 hover:text-slate-200"
+            }`}
+          >
+            <Mic className="w-3.5 h-3.5 text-indigo-400" />
+            <span>My Voice & Learning</span>
           </button>
 
           <button
             onClick={() => setActiveTab("saved")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1.5 transition-all relative cursor-pointer ${
+            className={`px-3 py-1.5 rounded-lg font-mono font-semibold flex items-center space-x-1.5 transition relative ${
               activeTab === "saved"
-                ? "bg-cyan-600 text-white shadow-sm"
-                : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
+                ? "bg-slate-700 text-white"
+                : "text-slate-400 hover:text-slate-200"
             }`}
           >
             <Bookmark className="w-3.5 h-3.5" />
             <span>Saved</span>
             {savedCount > 0 && (
-              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-cyan-400 text-dark-900 font-bold">
+              <span className="ml-1 px-1.5 py-0.2 rounded-full text-[10px] bg-amber-400 text-black font-bold">
                 {savedCount}
               </span>
             )}
           </button>
+        </div>
 
-          <button
-            onClick={() => setActiveTab("voice")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium flex items-center space-x-1.5 transition-all cursor-pointer ${
-              activeTab === "voice"
-                ? "bg-cyan-600 text-white shadow-sm"
-                : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
-            }`}
-          >
-            <Mic className="w-3.5 h-3.5" />
-            <span>My Voice</span>
-          </button>
-        </nav>
-
-        {/* Right Prominent Action Button: WHAT SHOULD I POST? */}
+        {/* Action Button: WHAT SHOULD I POST? */}
         <div className="flex items-center space-x-2 shrink-0">
           <button
             onClick={onWhatShouldIPost}
-            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 hover:from-amber-400 hover:to-indigo-500 shadow-md shadow-rose-500/20 transition-all cursor-pointer animate-pulse"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-black bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 shadow-md transition cursor-pointer"
           >
-            <Zap className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">⚡ WHAT SHOULD I POST?</span>
-            <span className="sm:hidden">⚡ POST?</span>
-          </button>
-
-          <button
-            onClick={onRefresh}
-            disabled={isRefreshing}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 border border-slate-700/60 transition shadow-sm cursor-pointer"
-            title="Sync Sources"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-cyan-400" : ""}`} />
-            <span className="hidden md:inline">Sync</span>
+            <Sparkles className="w-3.5 h-3.5 text-black" />
+            <span>What Should I Post?</span>
           </button>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };

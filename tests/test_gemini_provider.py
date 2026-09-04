@@ -84,6 +84,7 @@ def test_json_extraction_with_markdown_fences():
 @pytest.mark.asyncio
 async def test_post_variant_generation_and_originality():
     provider = GeminiProvider()
+    provider.client = None
     item = {
         "title": "OpenAI releases lightweight reasoning model",
         "content": "OpenAI has officially launched a lightweight reasoning model with native computer use.",
