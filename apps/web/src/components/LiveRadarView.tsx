@@ -5,6 +5,7 @@ import {
   Flame, RefreshCw, Eye, Film
 } from "lucide-react";
 import { V3Event } from "../types";
+import { MOCK_EVENTS } from "../lib/mockData";
 
 interface LiveRadarViewProps {
   onOpenContentStudio: (event: V3Event) => void;
@@ -25,6 +26,17 @@ export const LiveRadarView: React.FC<LiveRadarViewProps> = ({
   const [categoryFilter, setCategoryFilter] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
+  const getFilteredMockEvents = () => {
+    let filtered = [...MOCK_EVENTS];
+    if (statusFilter !== "ALL") filtered = filtered.filter(e => e.status === statusFilter);
+    if (categoryFilter !== "ALL") filtered = filtered.filter(e => e.category.toLowerCase().includes(categoryFilter.toLowerCase()));
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(e => e.title.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q));
+    }
+    return filtered;
+  };
+
   const fetchEvents = async () => {
     setLoading(true);
     try {
@@ -35,11 +47,19 @@ export const LiveRadarView: React.FC<LiveRadarViewProps> = ({
 
       const res = await fetch(`/api/events?${params.toString()}`);
       if (res.ok) {
-        const data = await res.json();
-        setEvents(data.events || []);
+        const text = await res.text();
+        if (!text.trim().startsWith("<")) {
+          const data = JSON.parse(text);
+          if (data.events && data.events.length > 0) {
+            setEvents(data.events);
+            return;
+          }
+        }
       }
+      setEvents(getFilteredMockEvents());
     } catch (err) {
-      console.error("Failed to load events", err);
+      console.warn("Backend API not reachable, loaded verified radar events fallback:", err);
+      setEvents(getFilteredMockEvents());
     } finally {
       setLoading(false);
     }

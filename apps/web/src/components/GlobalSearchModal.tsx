@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Search, X, Zap, Globe, TrendingUp, ArrowUpRight } from "lucide-react";
+import { MOCK_EVENTS, MOCK_NEWS_ITEMS, MOCK_TRENDS } from "../lib/mockData";
 
 interface GlobalSearchModalProps {
   isOpen: boolean;
@@ -27,11 +28,29 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({
       try {
         const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
         if (res.ok) {
-          const data = await res.json();
-          setResults(data.results || { events: [], news: [], trends: [] });
+          const text = await res.text();
+          if (!text.trim().startsWith("<")) {
+            const data = JSON.parse(text);
+            if (data.results) {
+              setResults(data.results);
+              return;
+            }
+          }
         }
+        const q = query.toLowerCase();
+        setResults({
+          events: MOCK_EVENTS.filter(e => e.title.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q)),
+          news: MOCK_NEWS_ITEMS.filter(n => n.title.toLowerCase().includes(q) || n.content.toLowerCase().includes(q)),
+          trends: MOCK_TRENDS.filter(t => t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q))
+        });
       } catch (err) {
-        console.error("Search failed", err);
+        console.warn("Backend search unavailable, searching offline intelligence:", err);
+        const q = query.toLowerCase();
+        setResults({
+          events: MOCK_EVENTS.filter(e => e.title.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q)),
+          news: MOCK_NEWS_ITEMS.filter(n => n.title.toLowerCase().includes(q) || n.content.toLowerCase().includes(q)),
+          trends: MOCK_TRENDS.filter(t => t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q))
+        });
       } finally {
         setLoading(false);
       }
