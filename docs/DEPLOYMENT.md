@@ -78,3 +78,24 @@ npm run build
 3. Click **Load unpacked**.
 4. Select the `extension/` directory from this repository.
 5. The extension icon will appear in the browser toolbar with 4 V3 tabs: `⚡ LIVE`, `📈 TRENDS`, `🎯 OPPS`, `✍ CREATE`.
+
+---
+
+## 5. Vercel Deployment (Frontend Dashboard)
+
+The frontend is pre-configured for instant zero-config deployment on Vercel:
+
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import your GitHub repository: `https://github.com/Ritish017/AIRadar`.
+3. Vercel will automatically read `vercel.json` and detect:
+   - **Framework Preset**: Vite
+   - **Build Command**: `npm --prefix apps/web run build`
+   - **Output Directory**: `apps/web/dist`
+4. (Optional) In **Environment Variables**, add:
+   - `VITE_API_BASE`: `https://<your-backend-domain>/api` (or URL where your FastAPI backend is running)
+5. Click **Deploy**.
+
+Alternatively, deploy via CLI from the project root:
+```bash
+npx vercel
+```
